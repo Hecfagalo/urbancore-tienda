@@ -25,25 +25,25 @@ const config = {
 const productsData = [
     {
         id: 1,
-        name: 'Clemont',
-        category: 'camiseta ALta Gama',
-        price: 94900,
-        originalPrice: 129900,
-        description: 'Camiseta de algodón orgánico con gráfico exclusivo. Cómoda y con estilo urbano.',
+        name: 'Clement New colection',
+        category: 'camisetas',
+        price: 95.900,
+        originalPrice: 129.900,
+        description: 'Camiseta de algodón premium 260gr con gráfico exclusivo. Cómoda y con estilo urbano.',
         image: 'https://i.imgur.com/bl9yx3y.png',
-        badge: null,
-        sizes: ['S', 'M', 'L', 'XL']
+        badge: 'Oferta',
+        sizes: ['XL']
     },
     {
         id: 2,
-        name: 'Polo Sport Navy',
+        name: 'Hell star Dark Brown',
         category: 'camisetas',
-        price: 55.90,
-        originalPrice: 69.90,
-        description: 'Polo deportivo con tecnología antimicrobial. Elegante y funcional.',
-        image: 'https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=600&q=80',
+        price: 95.900,
+        originalPrice: 129.900,
+        description: 'PCamiseta marrón oscuro de estilo streetwear, confeccionada en algodón de alta calidad. Diseño gráfico impactante que combina actitud urbana y comodidad para el día a día',
+        image: 'https://i.imgur.com/h1DlNoM.png',
         badge: 'Oferta',
-        sizes: ['S', 'M', 'L', 'XL']
+        sizes: ['XL']
     },
     {
         id: 3,
@@ -150,7 +150,7 @@ function createProductCard(product) {
         : '';
     
     const originalPriceHTML = product.originalPrice 
-        ? `<span class="price-original">S/ ${product.originalPrice.toFixed(2)}</span>` 
+        ? `<span class="price-original">$ ${product.originalPrice.toFixed(2)}</span>` 
         : '';
     
     const descriptionHTML = product.description 
@@ -184,7 +184,7 @@ function createProductCard(product) {
                 <span class="product-category">${getCategoryLabel(product.category)}</span>
                 <h3 class="product-name">${product.name}</h3>
                 <div class="product-price">
-                    <span class="price-current">S/ ${product.price.toFixed(2)}</span>
+                    <span class="price-current">$ ${product.price.toFixed(2)}</span>
                     ${originalPriceHTML}
                 </div>
                 ${descriptionHTML}
@@ -433,7 +433,7 @@ function setupWhatsAppButtons() {
 }
 
 function openWhatsApp(product) {
-    const message = `${config.whatsappMessage} "${product.name}" que cuesta S/ ${product.price.toFixed(2)}. ¿Tienen talla disponible?`;
+    const message = `${config.whatsappMessage} "${product.name}" que cuesta $ ${product.price.toFixed(2)}. ¿Tienen talla disponible?`;
     const encodedMessage = encodeURIComponent(message);
     const whatsappURL = `https://wa.me/${config.whatsappNumber}?text=${encodedMessage}`;
     
