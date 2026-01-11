@@ -30,7 +30,7 @@ const productsData = [
         price: 45.90,
         originalPrice: null,
         description: 'Camiseta de algodón orgánico con gráfico exclusivo. Cómoda y con estilo urbano.',
-        image: 'https://i.imgur.com/bl9yx3y.png',
+        image: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&q=80',
         badge: null,
         sizes: ['S', 'M', 'L', 'XL']
     },
@@ -114,6 +114,7 @@ function initApp() {
     setupLoadMore();
     setupSmoothScroll();
     setupAnimations();
+    setupLightbox();
 }
 
 // ============================================
@@ -172,6 +173,12 @@ function createProductCard(product) {
                         <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
                     </svg>
                 </button>
+                <div class="product-zoom-icon" aria-label="Ampliar imagen">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                        <path d="M12 10h-2v2H9v-2H7V9h2V7h1v2h2v1z"/>
+                    </svg>
+                </div>
             </div>
             <div class="product-info">
                 <span class="product-category">${getCategoryLabel(product.category)}</span>
@@ -324,6 +331,85 @@ function loadMoreProducts() {
             lastNewCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
     }
+}
+
+// ============================================
+// LIGHTBOX - AMPLIAR IMÁGENES
+// ============================================
+
+function setupLightbox() {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightbox-image');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+    const closeBtn = document.querySelector('.lightbox-close');
+    
+    if (!lightbox || !lightboxImage) {
+        console.warn('Lightbox elements not found');
+        return;
+    }
+    
+    // Abrir lightbox al hacer clic en imagen del producto
+    document.addEventListener('click', function(e) {
+        const imageContainer = e.target.closest('.product-image-container');
+        
+        if (imageContainer) {
+            const productCard = imageContainer.closest('.product-card');
+            const productImage = imageContainer.querySelector('.product-image');
+            const productName = productCard ? productCard.querySelector('.product-name')?.textContent : '';
+            
+            if (productImage && productImage.src) {
+                // Mostrar nombre del producto como caption
+                if (lightboxCaption) {
+                    lightboxCaption.textContent = productName || '';
+                }
+                
+                // Mostrar lightbox
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+                
+                // Cargar imagen
+                lightboxImage.classList.add('loading');
+                lightboxImage.src = productImage.src;
+                lightboxImage.alt = productName || 'Imagen de producto';
+                
+                lightboxImage.onload = function() {
+                    lightboxImage.classList.remove('loading');
+                };
+                
+                lightboxImage.onerror = function() {
+                    lightboxImage.classList.remove('loading');
+                    console.error('Error al cargar la imagen');
+                };
+            }
+        }
+    });
+    
+    // Cerrar lightbox
+    function closeLightbox() {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+        lightboxImage.src = '';
+    }
+    
+    if (closeBtn) {
+        closeBtn.addEventListener('click', closeLightbox);
+    }
+    
+    // Cerrar al hacer clic fuera de la imagen
+    if (lightbox) {
+        lightbox.addEventListener('click', function(e) {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+    }
+    
+    // Cerrar con teclado
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+            closeLightbox();
+        }
+    });
 }
 
 // ============================================
