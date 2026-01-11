@@ -169,11 +169,18 @@
 
     <!-- Lightbox para Ampliar Imágenes -->
     <div class="lightbox" id="lightbox">
-        <button class="lightbox-close" aria-label="Cerrar">&times;</button>
-        <div class="lightbox-content">
+        <div class="lightbox-header">
+            <span class="lightbox-caption" id="lightbox-caption"></span>
+            <div class="lightbox-controls">
+                <button class="lightbox-zoom-out" id="zoom-out" aria-label="Reducir zoom">−</button>
+                <button class="lightbox-zoom-reset" id="zoom-reset" aria-label="Restablecer zoom">⟲</button>
+                <button class="lightbox-zoom-in" id="zoom-in" aria-label="Aumentar zoom">+</button>
+                <button class="lightbox-close" aria-label="Cerrar">&times;</button>
+            </div>
+        </div>
+        <div class="lightbox-content" id="lightbox-content">
             <img src="" alt="Imagen ampliada" id="lightbox-image">
         </div>
-        <div class="lightbox-caption" id="lightbox-caption"></div>
     </div>
 
     <script src="script.js"></script>

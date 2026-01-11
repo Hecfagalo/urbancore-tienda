@@ -25,31 +25,31 @@ const config = {
 const productsData = [
     {
         id: 1,
-        name: 'Clement New colection',
+        name: 'T-Shirt Graphic Street White',
         category: 'camisetas',
-        price: 94900,
-        originalPrice: 129900,
-        description: 'Camiseta de algodón premium 260gr con gráfico exclusivo. Cómoda y con estilo urbano.',
-        image: 'https://i.imgur.com/bl9yx3y.png',
-        badge: 'Oferta',
-        sizes: ['XL']
+        price: 45900,
+        originalPrice: null,
+        description: 'Camiseta de algodón orgánico con gráfico exclusivo. Cómoda y con estilo urbano.',
+        image: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&q=80',
+        badge: null,
+        sizes: ['S', 'M', 'L', 'XL']
     },
     {
         id: 2,
-        name: 'Hell star Dark Brown',
+        name: 'Polo Sport Navy',
         category: 'camisetas',
-        price: 94900,
-        originalPrice: 129900,
-        description: 'PCamiseta marrón oscuro de estilo streetwear, confeccionada en algodón de alta calidad. Diseño gráfico impactante que combina actitud urbana y comodidad para el día a día',
-        image: 'https://i.imgur.com/h1DlNoM.png',
+        price: 55900,
+        originalPrice: 69900,
+        description: 'Polo deportivo con tecnología antimicrobial. Elegante y funcional.',
+        image: 'https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=600&q=80',
         badge: 'Oferta',
-        sizes: ['XL']
+        sizes: ['S', 'M', 'L', 'XL']
     },
     {
         id: 3,
         name: 'T-Shirt Basic Black',
         category: 'camisetas',
-        price: 39.90,
+        price: 39900,
         originalPrice: null,
         description: 'Camiseta básica de algodón premium. Versatil y cómoda para el día a día.',
         image: 'https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=600&q=80',
@@ -60,7 +60,7 @@ const productsData = [
         id: 4,
         name: 'T-Shirt Graphic Grey',
         category: 'camisetas',
-        price: 49.90,
+        price: 49900,
         originalPrice: null,
         description: 'Camiseta con diseño gráfico urbano. Prints de alta calidad.',
         image: 'https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=600&q=80',
@@ -71,7 +71,7 @@ const productsData = [
         id: 5,
         name: 'T-Shirt Oversize Blue',
         category: 'camisetas',
-        price: 55.90,
+        price: 55900,
         originalPrice: null,
         description: 'Camiseta oversize con corte moderno. Tejido suave y resistente.',
         image: 'https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=600&q=80',
@@ -82,7 +82,7 @@ const productsData = [
         id: 6,
         name: 'T-Shirt Premium Red',
         category: 'camisetas',
-        price: 59.90,
+        price: 59900,
         originalPrice: null,
         description: 'Camiseta premium de algodón orgánico. Acabados perfectos.',
         image: 'https://images.unsplash.com/photo-1516826957135-700dedea698c?w=600&q=80',
@@ -144,14 +144,22 @@ function renderProducts(products) {
     setupAnimations();
 }
 
+// ============================================
+// UTILIDADES
+// ============================================
+
 // Formatear precio al estilo peruano (95.900)
 function formatPrice(price) {
+    // Convertir a número y formatear con punto como separador de miles
     const numPrice = parseFloat(price);
     if (isNaN(numPrice)) return '$ 0';
+    
+    // Formatear con punto como separador de miles, sin decimales
     const formatted = numPrice.toLocaleString('es-PE', {
         minimumFractionDigits: 0,
         maximumFractionDigits: 0
     });
+    
     return '$ ' + formatted;
 }
 
@@ -159,10 +167,12 @@ function formatPrice(price) {
 function formatPriceDecimal(price) {
     const numPrice = parseFloat(price);
     if (isNaN(numPrice)) return '0';
+    
     const formatted = numPrice.toLocaleString('es-PE', {
         minimumFractionDigits: 0,
         maximumFractionDigits: 0
     });
+    
     return formatted;
 }
 
@@ -356,19 +366,32 @@ function loadMoreProducts() {
 }
 
 // ============================================
-// LIGHTBOX - AMPLIAR IMÁGENES
+// LIGHTBOX CON ZOOM - AMPLIAR IMÁGENES
 // ============================================
 
 function setupLightbox() {
     const lightbox = document.getElementById('lightbox');
     const lightboxImage = document.getElementById('lightbox-image');
+    const lightboxContent = document.getElementById('lightbox-content');
     const lightboxCaption = document.getElementById('lightbox-caption');
     const closeBtn = document.querySelector('.lightbox-close');
+    const zoomInBtn = document.getElementById('zoom-in');
+    const zoomOutBtn = document.getElementById('zoom-out');
+    const zoomResetBtn = document.getElementById('zoom-reset');
     
     if (!lightbox || !lightboxImage) {
         console.warn('Lightbox elements not found');
         return;
     }
+    
+    // Variables de estado del zoom
+    let currentZoom = 1;
+    const minZoom = 0.5;
+    const maxZoom = 5;
+    const zoomStep = 0.25;
+    let isDragging = false;
+    let startX, startY, translateX = 0, translateY = 0;
+    let initialTranslateX = 0, initialTranslateY = 0;
     
     // Abrir lightbox al hacer clic en imagen del producto
     document.addEventListener('click', function(e) {
@@ -385,9 +408,15 @@ function setupLightbox() {
                     lightboxCaption.textContent = productName || '';
                 }
                 
+                // Resetear zoom
+                currentZoom = 1;
+                translateX = 0;
+                translateY = 0;
+                updateImageTransform();
+                
                 // Mostrar lightbox
                 lightbox.classList.add('active');
-                document.body.style.overflow = 'hidden';
+                document.body.classList.add('lightbox-open');
                 
                 // Cargar imagen
                 lightboxImage.classList.add('loading');
@@ -406,10 +435,137 @@ function setupLightbox() {
         }
     });
     
+    // Función para actualizar el transform de la imagen
+    function updateImageTransform() {
+        lightboxImage.style.transform = `translate(${translateX}px, ${translateY}px) scale(${currentZoom})`;
+    }
+    
+    // Función para cambiar zoom
+    function setZoom(zoom) {
+        currentZoom = Math.max(minZoom, Math.min(maxZoom, zoom));
+        updateImageTransform();
+    }
+    
+    // Zoom con botones
+    if (zoomInBtn) {
+        zoomInBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            setZoom(currentZoom + zoomStep);
+        });
+    }
+    
+    if (zoomOutBtn) {
+        zoomOutBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            setZoom(currentZoom - zoomStep);
+        });
+    }
+    
+    if (zoomResetBtn) {
+        zoomResetBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            currentZoom = 1;
+            translateX = 0;
+            translateY = 0;
+            updateImageTransform();
+        });
+    }
+    
+    // Zoom con scroll del mouse
+    if (lightboxContent) {
+        lightboxContent.addEventListener('wheel', function(e) {
+            e.preventDefault();
+            const delta = e.deltaY > 0 ? -zoomStep : zoomStep;
+            setZoom(currentZoom + delta);
+        }, { passive: false });
+    }
+    
+    // Arrastrar la imagen
+    if (lightboxContent && lightboxImage) {
+        lightboxContent.addEventListener('mousedown', function(e) {
+            if (currentZoom > 1) {
+                isDragging = true;
+                startX = e.clientX;
+                startY = e.clientY;
+                initialTranslateX = translateX;
+                initialTranslateY = translateY;
+                lightboxContent.style.cursor = 'grabbing';
+            }
+        });
+        
+        document.addEventListener('mousemove', function(e) {
+            if (!isDragging) return;
+            
+            const deltaX = e.clientX - startX;
+            const deltaY = e.clientY - startY;
+            translateX = initialTranslateX + deltaX;
+            translateY = initialTranslateY + deltaY;
+            updateImageTransform();
+        });
+        
+        document.addEventListener('mouseup', function() {
+            isDragging = false;
+            lightboxContent.style.cursor = 'grab';
+        });
+        
+        // Táctil - gestos de pellizco para móviles
+        let touchStartDistance = 0;
+        let initialZoom = 1;
+        
+        lightboxContent.addEventListener('touchstart', function(e) {
+            if (e.touches.length === 2) {
+                // Iniciar pellizco
+                touchStartDistance = Math.hypot(
+                    e.touches[0].clientX - e.touches[1].clientX,
+                    e.touches[0].clientY - e.touches[1].clientY
+                );
+                initialZoom = currentZoom;
+                e.preventDefault();
+            } else if (e.touches.length === 1 && currentZoom > 1) {
+                // Iniciar arrastre
+                isDragging = true;
+                startX = e.touches[0].clientX;
+                startY = e.touches[0].clientY;
+                initialTranslateX = translateX;
+                initialTranslateY = translateY;
+            }
+        }, { passive: true });
+        
+        lightboxContent.addEventListener('touchmove', function(e) {
+            if (e.touches.length === 2 && touchStartDistance > 0) {
+                // Zoom con pellizco
+                const currentDistance = Math.hypot(
+                    e.touches[0].clientX - e.touches[1].clientX,
+                    e.touches[0].clientY - e.touches[1].clientY
+                );
+                const scale = currentDistance / touchStartDistance;
+                setZoom(initialZoom * scale);
+                e.preventDefault();
+            } else if (e.touches.length === 1 && isDragging) {
+                // Arrastre táctil
+                const deltaX = e.touches[0].clientX - startX;
+                const deltaY = e.touches[0].clientY - startY;
+                translateX = initialTranslateX + deltaX;
+                translateY = initialTranslateY + deltaY;
+                updateImageTransform();
+            }
+        }, { passive: false });
+        
+        lightboxContent.addEventListener('touchend', function() {
+            isDragging = false;
+            touchStartDistance = 0;
+        });
+    }
+    
     // Cerrar lightbox
     function closeLightbox() {
         lightbox.classList.remove('active');
-        document.body.style.overflow = '';
+        document.body.classList.remove('lightbox-open');
+        
+        // Resetear estado
+        currentZoom = 1;
+        translateX = 0;
+        translateY = 0;
         lightboxImage.src = '';
     }
     
@@ -594,28 +750,6 @@ window.addEventListener('scroll', function() {
 });
 
 // ============================================
-// BÚSQUEDA DE PRODUCTOS (FUNCIONALIDAD EXTRA)
-// ============================================
-
-function searchProducts(query) {
-    const searchTerm = query.toLowerCase().trim();
-    
-    if (!searchTerm) {
-        displayedProducts = productsData.slice(0, config.initialProducts);
-    } else {
-        const filtered = productsData.filter(product => 
-            product.name.toLowerCase().includes(searchTerm) ||
-            product.description.toLowerCase().includes(searchTerm) ||
-            product.category.toLowerCase().includes(searchTerm)
-        );
-        displayedProducts = filtered.slice(0, config.initialProducts);
-    }
-    
-    renderProducts(displayedProducts);
-    updateLoadMoreButton();
-}
-
-// ============================================
 // TOAST NOTIFICATIONS
 // ============================================
 
@@ -670,7 +804,6 @@ function showToast(message, type = 'success') {
 // EXPORTAR PARA USO EXTERNO
 // ============================================
 
-// Hacer funciones accesibles globalmente para mantenimiento
 window.UrbanCore = {
     config,
     productsData,
