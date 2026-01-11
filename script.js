@@ -25,25 +25,25 @@ const config = {
 const productsData = [
     {
         id: 1,
-        name: 'T-Shirt Graphic Street White',
+        name: 'Clemont',
         category: 'camisetas',
         price: 45900,
         originalPrice: null,
-        description: 'Camiseta de algodón orgánico con gráfico exclusivo. Cómoda y con estilo urbano.',
-        image: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&q=80',
+        description: 'Camiseta de algodón 260gr con gráfico exclusivo. Cómoda y con estilo urbano.',
+        image: 'https://i.imgur.com/bl9yx3y.png',
         badge: null,
-        sizes: ['S', 'M', 'L', 'XL']
+        sizes: ['XL']
     },
     {
         id: 2,
-        name: 'Polo Sport Navy',
+        name: 'Hell star Dark Brown',
         category: 'camisetas',
         price: 55900,
         originalPrice: 69900,
-        description: 'Polo deportivo con tecnología antimicrobial. Elegante y funcional.',
-        image: 'https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=600&q=80',
+        description: 'Camiseta marrón oscuro de estilo streetwear, algodón premium 260g. Diseño gráfico impactante que combina actitud urbana y comodidad para el día a día',
+        image: 'https://i.imgur.com/h1DlNoM.png',
         badge: 'Oferta',
-        sizes: ['S', 'M', 'L', 'XL']
+        sizes: ['XL']
     },
     {
         id: 3,
