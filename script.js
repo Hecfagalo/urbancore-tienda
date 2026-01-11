@@ -30,7 +30,7 @@ const productsData = [
         price: 45.90,
         originalPrice: null,
         description: 'Camiseta de algodón orgánico con gráfico exclusivo. Cómoda y con estilo urbano.',
-        image: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&q=80',
+        image: 'https://i.imgur.com/bl9yx3y.png',
         badge: null,
         sizes: ['S', 'M', 'L', 'XL']
     },
