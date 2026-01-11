@@ -144,13 +144,35 @@ function renderProducts(products) {
     setupAnimations();
 }
 
+// Formatear precio al estilo peruano (95.900)
+function formatPrice(price) {
+    const numPrice = parseFloat(price);
+    if (isNaN(numPrice)) return '$ 0';
+    const formatted = numPrice.toLocaleString('es-PE', {
+        minimumFractionDigits: 0,
+        maximumFractionDigits: 0
+    });
+    return '$ ' + formatted;
+}
+
+// Formatear precio con decimales para WhatsApp
+function formatPriceDecimal(price) {
+    const numPrice = parseFloat(price);
+    if (isNaN(numPrice)) return '0';
+    const formatted = numPrice.toLocaleString('es-PE', {
+        minimumFractionDigits: 0,
+        maximumFractionDigits: 0
+    });
+    return formatted;
+}
+
 function createProductCard(product) {
     const badgeHTML = product.badge 
         ? `<span class="product-badge ${product.badge.toLowerCase()}">${product.badge}</span>` 
         : '';
     
     const originalPriceHTML = product.originalPrice 
-        ? `<span class="price-original">$ ${product.originalPrice.toFixed(2)}</span>` 
+        ? `<span class="price-original">$ ${formatPriceDecimal(product.originalPrice)}</span>` 
         : '';
     
     const descriptionHTML = product.description 
@@ -184,7 +206,7 @@ function createProductCard(product) {
                 <span class="product-category">${getCategoryLabel(product.category)}</span>
                 <h3 class="product-name">${product.name}</h3>
                 <div class="product-price">
-                    <span class="price-current">$ ${product.price.toFixed(2)}</span>
+                    <span class="price-current">${formatPrice(product.price)}</span>
                     ${originalPriceHTML}
                 </div>
                 ${descriptionHTML}
@@ -433,7 +455,7 @@ function setupWhatsAppButtons() {
 }
 
 function openWhatsApp(product) {
-    const message = `${config.whatsappMessage} "${product.name}" que cuesta $ ${product.price.toFixed(2)}. ¿Tienen talla disponible?`;
+    const message = `${config.whatsappMessage} "${product.name}" que cuesta $ ${formatPriceDecimal(product.price)}. ¿Tienen talla disponible?`;
     const encodedMessage = encodeURIComponent(message);
     const whatsappURL = `https://wa.me/${config.whatsappNumber}?text=${encodedMessage}`;
     
