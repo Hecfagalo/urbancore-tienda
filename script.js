@@ -19,29 +19,38 @@ const config = {
 };
 
 // ============================================
-// DATOS DE PRODUCTOS - SOLO CAMISETAS
+// DATOS DE PRODUCTOS - 12 ARTÍCULOS
 // ============================================
+// NOTA: El campo "image" es la imagen principal
+//       El campo "images" (array) incluye todas las imágenes del producto
 
 const productsData = [
     {
         id: 1,
-        name: 'Clemont',
+        name: 'Clemont Manos',
         category: 'camisetas',
-        price: 45900,
-        originalPrice: null,
-        description: 'Camiseta de algodón 260gr con gráfico exclusivo. Cómoda y con estilo urbano.',
-        image: 'https://i.imgur.com/bl9yx3y.png',
-        badge: null,
+        price: 95900,
+        originalPrice: 129900,
+        description: 'Esta es la camiseta "Manos" de la marca colombiana Clemont, una pieza representativa de su estilo streetwear con enfoque espiritual.',
+        image: 'https://imgur.com/gallery/clemont-touch-y43kvW2',
+        images: [
+
+        ],
+        badge: 'Oferta',
         sizes: ['XL']
     },
     {
         id: 2,
-        name: 'Hell star Dark Brown',
+        name: 'Clemont Sagrado corazon',
         category: 'camisetas',
-        price: 55900,
-        originalPrice: 69900,
-        description: 'Camiseta marrón oscuro de estilo streetwear, algodón premium 260g. Diseño gráfico impactante que combina actitud urbana y comodidad para el día a día',
-        image: 'https://i.imgur.com/h1DlNoM.png',
+        price: 95900,
+        originalPrice: 129900,
+        description: 'Esta es la camiseta Sagrado Corazón de la marca colombiana Clemont, una pieza que profundiza en la estética mística y espiritual que caracteriza a la firma de Medellín.',
+        image: 'https://imgur.com/gallery/camisetas-R6Ivdxn',
+        images: [
+            'https://imgur.com/gallery/camisetas-R6Ivdxn',
+            'https://imgur.com/gallery/clemont-b6Y64Ce',
+        ],
         badge: 'Oferta',
         sizes: ['XL']
     },
@@ -51,10 +60,13 @@ const productsData = [
         category: 'camisetas',
         price: 39900,
         originalPrice: null,
-        description: 'Camiseta básica de algodón premium. Versatil y cómoda para el día a día.',
-        image: 'https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=600&q=80',
+        description: 'Esta es una camiseta de la marca Hellstar, conocida por su estética punk-rock y gráficos de inspiración post-apocalíptica o "espacial" que han ganado gran popularidad en la escena del streetwear',
+        image: 'https://imgur.com/gallery/hellstar-f-85VNKJL',
+        images: [
+            'https://imgur.com/gallery/hellstar-b-A3fNLUi'
+        ],
         badge: 'Nuevo',
-        sizes: ['S', 'M', 'L', 'XL']
+        sizes: ['XL']
     },
     {
         id: 4,
@@ -64,6 +76,10 @@ const productsData = [
         originalPrice: null,
         description: 'Camiseta con diseño gráfico urbano. Prints de alta calidad.',
         image: 'https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=600&q=80',
+        images: [
+            'https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=600&q=80',
+            'https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=600&q=80'
+        ],
         badge: null,
         sizes: ['S', 'M', 'L', 'XL']
     },
@@ -75,6 +91,11 @@ const productsData = [
         originalPrice: null,
         description: 'Camiseta oversize con corte moderno. Tejido suave y resistente.',
         image: 'https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=600&q=80',
+        images: [
+            'https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=600&q=80',
+            'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&q=80',
+            'https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=600&q=80'
+        ],
         badge: null,
         sizes: ['S', 'M', 'L', 'XL']
     },
@@ -86,6 +107,100 @@ const productsData = [
         originalPrice: null,
         description: 'Camiseta premium de algodón orgánico. Acabados perfectos.',
         image: 'https://images.unsplash.com/photo-1516826957135-700dedea698c?w=600&q=80',
+        images: [
+            'https://images.unsplash.com/photo-1516826957135-700dedea698c?w=600&q=80'
+        ],
+        badge: 'Nuevo',
+        sizes: ['S', 'M', 'L', 'XL']
+    },
+    {
+        id: 7,
+        name: 'Camiseta Urbana Dark',
+        category: 'camisetas',
+        price: 42900,
+        originalPrice: null,
+        description: 'Diseño urbano contemporáneo en color negro. Perfecta para cualquier ocasión.',
+        image: 'https://images.unsplash.com/photo-1617127365659-c47fa864d8bc?w=600&q=80',
+        images: [
+            'https://images.unsplash.com/photo-1617127365659-c47fa864d8bc?w=600&q=80',
+            'https://images.unsplash.com/photo-1503341455253-dff4815485f1?w=600&q=80'
+        ],
+        badge: null,
+        sizes: ['S', 'M', 'L', 'XL']
+    },
+    {
+        id: 8,
+        name: 'Polo Classic White',
+        category: 'camisetas',
+        price: 48900,
+        originalPrice: 59000,
+        description: 'Polo clásico de corte regular. Algodón peinado de alta calidad.',
+        image: 'https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=600&q=80',
+        images: [
+            'https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=600&q=80',
+            'https://images.unsplash.com/photo-1562157873-818bc0726f68?w=600&q=80'
+        ],
+        badge: 'Oferta',
+        sizes: ['S', 'M', 'L', 'XL']
+    },
+    {
+        id: 9,
+        name: 'T-Shirt Vintage Green',
+        category: 'camisetas',
+        price: 51900,
+        originalPrice: null,
+        description: 'Estilo vintage con tintes ecológicos. Suavidad excepcional.',
+        image: 'https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=600&q=80',
+        images: [
+            'https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=600&q=80',
+            'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&q=80',
+            'https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=600&q=80'
+        ],
+        badge: null,
+        sizes: ['S', 'M', 'L', 'XL']
+    },
+    {
+        id: 10,
+        name: 'Camiseta Performance',
+        category: 'camisetas',
+        price: 64900,
+        originalPrice: 79000,
+        description: 'Tecnología de alto rendimiento. Secado rápido y compresión ideal.',
+        image: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&q=80',
+        images: [
+            'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&q=80',
+            'https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=600&q=80'
+        ],
+        badge: 'Oferta',
+        sizes: ['S', 'M', 'L', 'XL']
+    },
+    {
+        id: 11,
+        name: 'T-Shirt Minimalist Beige',
+        category: 'camisetas',
+        price: 44900,
+        originalPrice: null,
+        description: 'Diseño minimalista para un look sofisticado. Versatilidad garantizada.',
+        image: 'https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=600&q=80',
+        images: [
+            'https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=600&q=80'
+        ],
+        badge: null,
+        sizes: ['S', 'M', 'L', 'XL']
+    },
+    {
+        id: 12,
+        name: 'Polo Elegant Grey',
+        category: 'camisetas',
+        price: 54900,
+        originalPrice: null,
+        description: 'Acabados premium con cuello perfectamente estructurado.',
+        image: 'https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=600&q=80',
+        images: [
+            'https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=600&q=80',
+            'https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=600&q=80',
+            'https://images.unsplash.com/photo-1562157873-818bc0726f68?w=600&q=80'
+        ],
         badge: 'Nuevo',
         sizes: ['S', 'M', 'L', 'XL']
     }
@@ -140,6 +255,9 @@ function renderProducts(products) {
     // Añadir event listeners a los botones de WhatsApp
     setupWhatsAppButtons();
     
+    // Añadir event listeners a las miniaturas
+    setupThumbnailClicks();
+    
     // Reiniciar animaciones
     setupAnimations();
 }
@@ -148,31 +266,25 @@ function renderProducts(products) {
 // UTILIDADES
 // ============================================
 
-// Formatear precio al estilo peruano (95.900)
+// Formatear precio al estilo colombiano (95.900)
 function formatPrice(price) {
-    // Convertir a número y formatear con punto como separador de miles
     const numPrice = parseFloat(price);
     if (isNaN(numPrice)) return '$ 0';
-    
-    // Formatear con punto como separador de miles, sin decimales
-    const formatted = numPrice.toLocaleString('es-PE', {
+    const formatted = numPrice.toLocaleString('es-CO', {
         minimumFractionDigits: 0,
         maximumFractionDigits: 0
     });
-    
     return '$ ' + formatted;
 }
 
-// Formatear precio con decimales para WhatsApp
+// Formatear precio con formato para WhatsApp
 function formatPriceDecimal(price) {
     const numPrice = parseFloat(price);
     if (isNaN(numPrice)) return '0';
-    
-    const formatted = numPrice.toLocaleString('es-PE', {
+    const formatted = numPrice.toLocaleString('es-CO', {
         minimumFractionDigits: 0,
         maximumFractionDigits: 0
     });
-    
     return formatted;
 }
 
@@ -189,9 +301,12 @@ function createProductCard(product) {
         ? `<p class="product-description">${product.description}</p>` 
         : '';
     
+    // Generar miniaturas si hay múltiples imágenes
+    const thumbnailsHTML = generateThumbnails(product);
+    
     return `
-        <article class="product-card" data-product-id="${product.id}">
-            <div class="product-image-container">
+        <article class="product-card" data-product-id="${product.id}" data-images="${encodeURIComponent(JSON.stringify(product.images))}">
+            <div class="product-image-container" data-main-image="${product.image}">
                 <img 
                     src="${product.image}" 
                     alt="${product.name}"
@@ -212,6 +327,7 @@ function createProductCard(product) {
                     </svg>
                 </div>
             </div>
+            ${thumbnailsHTML}
             <div class="product-info">
                 <span class="product-category">${getCategoryLabel(product.category)}</span>
                 <h3 class="product-name">${product.name}</h3>
@@ -229,6 +345,58 @@ function createProductCard(product) {
             </div>
         </article>
     `;
+}
+
+// Generar HTML de miniaturas
+function generateThumbnails(product) {
+    const images = product.images || [product.image];
+    
+    if (images.length <= 1) {
+        return ''; // No mostrar miniaturas si solo hay una imagen
+    }
+    
+    let thumbnailsHTML = '<div class="product-thumbnails">';
+    
+    images.forEach((img, index) => {
+        const activeClass = index === 0 ? 'active' : '';
+        thumbnailsHTML += `
+            <div class="thumbnail ${activeClass}" data-image="${img}" data-index="${index}">
+                <img src="${img}" alt="Imagen ${index + 1}" loading="lazy">
+            </div>
+        `;
+    });
+    
+    thumbnailsHTML += '</div>';
+    return thumbnailsHTML;
+}
+
+// Configurar clics en miniaturas
+function setupThumbnailClicks() {
+    const thumbnails = document.querySelectorAll('.thumbnail');
+    
+    thumbnails.forEach(thumb => {
+        thumb.addEventListener('click', function() {
+            const newImage = this.dataset.image;
+            const productCard = this.closest('.product-card');
+            const imageContainer = productCard.querySelector('.product-image-container');
+            const mainImage = imageContainer.querySelector('.product-image');
+            
+            // Actualizar imagen principal con transición
+            mainImage.style.opacity = '0';
+            
+            setTimeout(() => {
+                mainImage.src = newImage;
+                mainImage.onload = () => {
+                    mainImage.style.opacity = '1';
+                };
+            }, 200);
+            
+            // Actualizar clase active en miniaturas
+            const allThumbs = productCard.querySelectorAll('.thumbnail');
+            allThumbs.forEach(t => t.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
 }
 
 function getCategoryLabel(category) {
@@ -342,6 +510,7 @@ function loadMoreProducts() {
     
     // Configurar event listeners para los nuevos botones
     setupWhatsAppButtons();
+    setupThumbnailClicks();
     
     // Añadir animaciones a los nuevos productos
     const newCards = grid.querySelectorAll('.product-card:not([style*="opacity: 0"])');
@@ -366,7 +535,7 @@ function loadMoreProducts() {
 }
 
 // ============================================
-// LIGHTBOX CON ZOOM - AMPLIAR IMÁGENES
+// LIGHTBOX CON ZOOM Y GALERÍA
 // ============================================
 
 function setupLightbox() {
@@ -374,66 +543,30 @@ function setupLightbox() {
     const lightboxImage = document.getElementById('lightbox-image');
     const lightboxContent = document.getElementById('lightbox-content');
     const lightboxCaption = document.getElementById('lightbox-caption');
+    const galleryIndicator = document.getElementById('gallery-indicator');
     const closeBtn = document.querySelector('.lightbox-close');
     const zoomInBtn = document.getElementById('zoom-in');
     const zoomOutBtn = document.getElementById('zoom-out');
     const zoomResetBtn = document.getElementById('zoom-reset');
+    const prevBtn = document.getElementById('gallery-prev');
+    const nextBtn = document.getElementById('gallery-next');
     
     if (!lightbox || !lightboxImage) {
         console.warn('Lightbox elements not found');
         return;
     }
     
-    // Variables de estado del zoom
+    // Variables de estado del zoom y galería
     let currentZoom = 1;
+    let currentImageIndex = 0;
+    let currentImages = [];
+    let currentProductName = '';
     const minZoom = 0.5;
     const maxZoom = 5;
     const zoomStep = 0.25;
     let isDragging = false;
     let startX, startY, translateX = 0, translateY = 0;
     let initialTranslateX = 0, initialTranslateY = 0;
-    
-    // Abrir lightbox al hacer clic en imagen del producto
-    document.addEventListener('click', function(e) {
-        const imageContainer = e.target.closest('.product-image-container');
-        
-        if (imageContainer) {
-            const productCard = imageContainer.closest('.product-card');
-            const productImage = imageContainer.querySelector('.product-image');
-            const productName = productCard ? productCard.querySelector('.product-name')?.textContent : '';
-            
-            if (productImage && productImage.src) {
-                // Mostrar nombre del producto como caption
-                if (lightboxCaption) {
-                    lightboxCaption.textContent = productName || '';
-                }
-                
-                // Resetear zoom
-                currentZoom = 1;
-                translateX = 0;
-                translateY = 0;
-                updateImageTransform();
-                
-                // Mostrar lightbox
-                lightbox.classList.add('active');
-                document.body.classList.add('lightbox-open');
-                
-                // Cargar imagen
-                lightboxImage.classList.add('loading');
-                lightboxImage.src = productImage.src;
-                lightboxImage.alt = productName || 'Imagen de producto';
-                
-                lightboxImage.onload = function() {
-                    lightboxImage.classList.remove('loading');
-                };
-                
-                lightboxImage.onerror = function() {
-                    lightboxImage.classList.remove('loading');
-                    console.error('Error al cargar la imagen');
-                };
-            }
-        }
-    });
     
     // Función para actualizar el transform de la imagen
     function updateImageTransform() {
@@ -444,6 +577,73 @@ function setupLightbox() {
     function setZoom(zoom) {
         currentZoom = Math.max(minZoom, Math.min(maxZoom, zoom));
         updateImageTransform();
+    }
+    
+    // Función para crear los puntos indicadores
+    function createGalleryIndicator() {
+        if (!galleryIndicator || currentImages.length <= 1) {
+            if (galleryIndicator) galleryIndicator.innerHTML = '';
+            return;
+        }
+
+        galleryIndicator.innerHTML = '';
+        currentImages.forEach((_, index) => {
+            const dot = document.createElement('div');
+            dot.className = `gallery-dot ${index === currentImageIndex ? 'active' : ''}`;
+            dot.addEventListener('click', function() {
+                currentImageIndex = index;
+                navigateImage(0);
+            });
+            galleryIndicator.appendChild(dot);
+        });
+    }
+
+    // Función para actualizar los puntos indicadores
+    function updateGalleryIndicator() {
+        if (!galleryIndicator || currentImages.length <= 1) return;
+
+        const dots = galleryIndicator.querySelectorAll('.gallery-dot');
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentImageIndex);
+        });
+    }
+    
+    // Función para navegar entre imágenes
+    function navigateImage(direction) {
+        if (direction !== 0) {
+            currentImageIndex += direction;
+
+            // Loop circular
+            if (currentImageIndex < 0) {
+                currentImageIndex = currentImages.length - 1;
+            } else if (currentImageIndex >= currentImages.length) {
+                currentImageIndex = 0;
+            }
+        }
+
+        // Resetear zoom al cambiar imagen
+        currentZoom = 1;
+        translateX = 0;
+        translateY = 0;
+
+        // Actualizar caption
+        if (lightboxCaption) {
+            lightboxCaption.textContent = `${currentProductName} (${currentImageIndex + 1}/${currentImages.length})`;
+        }
+
+        // Actualizar indicador de posición
+        updateGalleryIndicator();
+
+        // Transición suave
+        lightboxImage.style.opacity = '0';
+
+        setTimeout(() => {
+            lightboxImage.src = currentImages[currentImageIndex];
+            lightboxImage.onload = () => {
+                lightboxImage.style.opacity = '1';
+                updateImageTransform();
+            };
+        }, 200);
     }
     
     // Zoom con botones
@@ -468,6 +668,21 @@ function setupLightbox() {
             translateX = 0;
             translateY = 0;
             updateImageTransform();
+        });
+    }
+    
+    // Navegación de galería
+    if (prevBtn) {
+        prevBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            navigateImage(-1);
+        });
+    }
+    
+    if (nextBtn) {
+        nextBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            navigateImage(1);
         });
     }
     
@@ -508,13 +723,12 @@ function setupLightbox() {
             lightboxContent.style.cursor = 'grab';
         });
         
-        // Táctil - gestos de pellizco para móviles
+        // Táctil
         let touchStartDistance = 0;
         let initialZoom = 1;
         
         lightboxContent.addEventListener('touchstart', function(e) {
             if (e.touches.length === 2) {
-                // Iniciar pellizco
                 touchStartDistance = Math.hypot(
                     e.touches[0].clientX - e.touches[1].clientX,
                     e.touches[0].clientY - e.touches[1].clientY
@@ -522,7 +736,6 @@ function setupLightbox() {
                 initialZoom = currentZoom;
                 e.preventDefault();
             } else if (e.touches.length === 1 && currentZoom > 1) {
-                // Iniciar arrastre
                 isDragging = true;
                 startX = e.touches[0].clientX;
                 startY = e.touches[0].clientY;
@@ -533,7 +746,6 @@ function setupLightbox() {
         
         lightboxContent.addEventListener('touchmove', function(e) {
             if (e.touches.length === 2 && touchStartDistance > 0) {
-                // Zoom con pellizco
                 const currentDistance = Math.hypot(
                     e.touches[0].clientX - e.touches[1].clientX,
                     e.touches[0].clientY - e.touches[1].clientY
@@ -542,7 +754,6 @@ function setupLightbox() {
                 setZoom(initialZoom * scale);
                 e.preventDefault();
             } else if (e.touches.length === 1 && isDragging) {
-                // Arrastre táctil
                 const deltaX = e.touches[0].clientX - startX;
                 const deltaY = e.touches[0].clientY - startY;
                 translateX = initialTranslateX + deltaX;
@@ -557,12 +768,62 @@ function setupLightbox() {
         });
     }
     
+    // Abrir lightbox al hacer clic en imagen del producto
+    document.addEventListener('click', function(e) {
+        const imageContainer = e.target.closest('.product-image-container');
+        
+        if (imageContainer) {
+            const productCard = imageContainer.closest('.product-card');
+            const productImage = imageContainer.querySelector('.product-image');
+            
+            if (productImage && productImage.src) {
+                // Obtener todas las imágenes del producto
+                try {
+                    currentImages = JSON.parse(decodeURIComponent(productCard.dataset.images));
+                } catch (error) {
+                    currentImages = [productImage.src];
+                }
+                
+                currentProductName = productCard.querySelector('.product-name')?.textContent || '';
+                currentImageIndex = 0;
+
+                // Crear indicadores de galería
+                createGalleryIndicator();
+                
+                // Resetear estado
+                currentZoom = 1;
+                translateX = 0;
+                translateY = 0;
+                updateImageTransform();
+                
+                // Mostrar lightbox
+                lightbox.classList.add('active');
+                document.body.classList.add('lightbox-open');
+                
+                // Cargar imagen
+                lightboxImage.classList.add('loading');
+                lightboxImage.src = currentImages[0];
+                lightboxImage.alt = currentProductName || 'Imagen de producto';
+                
+                lightboxImage.onload = function() {
+                    lightboxImage.classList.remove('loading');
+                };
+                
+                lightboxImage.onerror = function() {
+                    lightboxImage.classList.remove('loading');
+                    console.error('Error al cargar la imagen');
+                };
+
+                // Inicializar estado de la imagen
+                navigateImage(0);
+            }
+        }
+    });
+    
     // Cerrar lightbox
     function closeLightbox() {
         lightbox.classList.remove('active');
         document.body.classList.remove('lightbox-open');
-        
-        // Resetear estado
         currentZoom = 1;
         translateX = 0;
         translateY = 0;
@@ -573,7 +834,6 @@ function setupLightbox() {
         closeBtn.addEventListener('click', closeLightbox);
     }
     
-    // Cerrar al hacer clic fuera de la imagen
     if (lightbox) {
         lightbox.addEventListener('click', function(e) {
             if (e.target === lightbox) {
@@ -582,10 +842,13 @@ function setupLightbox() {
         });
     }
     
-    // Cerrar con teclado
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape' && lightbox.classList.contains('active')) {
             closeLightbox();
+        } else if (e.key === 'ArrowLeft' && lightbox.classList.contains('active')) {
+            navigateImage(-1);
+        } else if (e.key === 'ArrowRight' && lightbox.classList.contains('active')) {
+            navigateImage(1);
         }
     });
 }
@@ -614,11 +877,7 @@ function openWhatsApp(product) {
     const message = `${config.whatsappMessage} "${product.name}" que cuesta $ ${formatPriceDecimal(product.price)}. ¿Tienen talla disponible?`;
     const encodedMessage = encodeURIComponent(message);
     const whatsappURL = `https://wa.me/${config.whatsappNumber}?text=${encodedMessage}`;
-    
-    // Abrir en nueva pestaña
     window.open(whatsappURL, '_blank');
-    
-    // Tracking de conversión (opcional)
     trackWhatsAppClick(product);
 }
 
@@ -629,23 +888,7 @@ function openWhatsAppGeneric() {
 }
 
 function trackWhatsAppClick(product) {
-    // Aquí puedes añadir Analytics o Pixel de Facebook
     console.log('Producto pedido por WhatsApp:', product.name);
-    
-    // Ejemplo de Google Analytics
-    if (typeof gtag !== 'undefined') {
-        gtag('event', 'conversion', {
-            'send_to': 'AW-CONVERSION_ID',
-            'value': product.price,
-            'currency': 'PEN',
-            'items': [{
-                'id': product.id,
-                'name': product.name,
-                'category': product.category,
-                'price': product.price
-            }]
-        });
-    }
 }
 
 // ============================================
@@ -662,7 +905,6 @@ function setupMobileMenu() {
             nav.classList.toggle('active');
         });
         
-        // Cerrar menú al hacer click en un enlace
         nav.querySelectorAll('.nav-link').forEach(link => {
             link.addEventListener('click', () => {
                 menuButton.classList.remove('active');
@@ -670,7 +912,6 @@ function setupMobileMenu() {
             });
         });
         
-        // Cerrar menú al hacer click fuera
         document.addEventListener('click', function(event) {
             if (!menuButton.contains(event.target) && !nav.contains(event.target)) {
                 menuButton.classList.remove('active');
@@ -726,7 +967,6 @@ function setupAnimations() {
         });
     }, observerOptions);
     
-    // Observar elementos animados
     document.querySelectorAll('.product-card, .feature-card').forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(30px)';
@@ -750,57 +990,6 @@ window.addEventListener('scroll', function() {
 });
 
 // ============================================
-// TOAST NOTIFICATIONS
-// ============================================
-
-function showToast(message, type = 'success') {
-    // Eliminar toast existente
-    const existingToast = document.querySelector('.toast');
-    if (existingToast) {
-        existingToast.remove();
-    }
-    
-    // Crear toast
-    const toast = document.createElement('div');
-    toast.className = `toast toast-${type}`;
-    toast.textContent = message;
-    
-    // Estilos dinámicos
-    Object.assign(toast.style, {
-        position: 'fixed',
-        bottom: '100px',
-        left: '50%',
-        transform: 'translateX(-50%) translateY(100px)',
-        padding: '16px 24px',
-        backgroundColor: type === 'success' ? '#28A745' : '#DC3545',
-        color: 'white',
-        borderRadius: '8px',
-        boxShadow: '0 4px 20px rgba(0, 0, 0, 0.2)',
-        zIndex: '9999',
-        opacity: '0',
-        transition: 'all 0.3s ease',
-        fontFamily: 'Inter, sans-serif',
-        fontSize: '0.95rem',
-        fontWeight: '500'
-    });
-    
-    document.body.appendChild(toast);
-    
-    // Animar entrada
-    requestAnimationFrame(() => {
-        toast.style.opacity = '1';
-        toast.style.transform = 'translateX(-50%) translateY(0)';
-    });
-    
-    // Eliminar después de 3 segundos
-    setTimeout(() => {
-        toast.style.opacity = '0';
-        toast.style.transform = 'translateX(-50%) translateY(100px)';
-        setTimeout(() => toast.remove(), 300);
-    }, 3000);
-}
-
-// ============================================
 // EXPORTAR PARA USO EXTERNO
 // ============================================
 
@@ -808,11 +997,10 @@ window.UrbanCore = {
     config,
     productsData,
     refreshProducts: () => filterProducts(currentCategory),
-    searchProducts,
     showToast,
     openWhatsApp: openWhatsAppGeneric
 };
 
-console.log('🌆 UrbanCore - Tienda Online cargada correctamente');
-console.log(`📦 ${productsData.length} productos disponibles`);
-console.log('✅ WhatsApp configurado para:', config.whatsappNumber);
+console.log('UrbanCore - Tienda Online cargada correctamente');
+console.log(`${productsData.length} productos disponibles`);
+console.log('WhatsApp configurado para:', config.whatsappNumber);

@@ -17,13 +17,13 @@
             <a href="#" class="logo">
                 <span class="logo-text">URBAN<span class="logo-accent">CORE</span></span>
             </a>
-            
+
             <nav class="nav">
                 <a href="#inicio" class="nav-link active">Inicio</a>
                 <a href="#catalogo" class="nav-link">Catálogo</a>
                 <a href="#contacto" class="nav-link">Contacto</a>
             </nav>
-            
+
             <button class="mobile-menu-btn" aria-label="Menú">
                 <span></span>
                 <span></span>
@@ -56,11 +56,11 @@
     <section id="catalogo" class="catalog-section">
         <div class="container">
             <h2 class="section-title">NUESTRA COLECCIÓN</h2>
-            
+
             <div class="products-grid" id="products-grid">
                 <!-- Products will be injected by JavaScript -->
             </div>
-            
+
             <div class="load-more-container">
                 <button class="btn btn-secondary" id="load-more">Ver Más Productos</button>
             </div>
@@ -167,7 +167,7 @@
         </svg>
     </a>
 
-    <!-- Lightbox para Ampliar Imágenes -->
+    <!-- Lightbox para Ampliar Imágenes con Navegación de Galería -->
     <div class="lightbox" id="lightbox">
         <div class="lightbox-header">
             <span class="lightbox-caption" id="lightbox-caption"></span>
@@ -178,6 +178,22 @@
                 <button class="lightbox-close" aria-label="Cerrar">&times;</button>
             </div>
         </div>
+
+        <!-- Botones de navegación de galería -->
+        <button class="gallery-nav gallery-prev" id="gallery-prev" aria-label="Imagen anterior">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M15 18l-6-6 6-6"/>
+            </svg>
+        </button>
+        <button class="gallery-nav gallery-next" id="gallery-next" aria-label="Imagen siguiente">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 18l6-6-6-6"/>
+            </svg>
+        </button>
+
+        <!-- Indicadores de posición -->
+        <div class="gallery-indicator" id="gallery-indicator"></div>
+
         <div class="lightbox-content" id="lightbox-content">
             <img src="" alt="Imagen ampliada" id="lightbox-image">
         </div>
