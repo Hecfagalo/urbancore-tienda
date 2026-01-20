@@ -32,7 +32,7 @@ const productsData = [
         price: 95900,
         originalPrice: 129900,
         description: 'Esta es la camiseta "Manos" de la marca colombiana Clemont, una pieza representativa de su estilo streetwear con enfoque espiritual.',
-        image: 'https://imgur.com/gallery/clemont-touch-y43kvW2',
+        image: 'https://i.imgur.com/78nFB3O.png',
         images: [
 
         ],
@@ -46,24 +46,25 @@ const productsData = [
         price: 95900,
         originalPrice: 129900,
         description: 'Esta es la camiseta Sagrado Corazón de la marca colombiana Clemont, una pieza que profundiza en la estética mística y espiritual que caracteriza a la firma de Medellín.',
-        image: 'https://imgur.com/gallery/camisetas-R6Ivdxn',
+        image: 'https://i.imgur.com/wm8n4Pt.png',
         images: [
-            'https://imgur.com/gallery/camisetas-R6Ivdxn',
-            'https://imgur.com/gallery/clemont-b6Y64Ce',
+            'https://i.imgur.com/wm8n4Pt.png',
+            'https://i.imgur.com/M3CxNVG.png',
         ],
         badge: 'Oferta',
         sizes: ['XL']
     },
     {
         id: 3,
-        name: 'T-Shirt Basic Black',
+        name: 'HELLSTAR',
         category: 'camisetas',
-        price: 39900,
+        price: 95900,
         originalPrice: null,
         description: 'Esta es una camiseta de la marca Hellstar, conocida por su estética punk-rock y gráficos de inspiración post-apocalíptica o "espacial" que han ganado gran popularidad en la escena del streetwear',
-        image: 'https://imgur.com/gallery/hellstar-f-85VNKJL',
+        image: 'https://i.imgur.com/US4ahi3.png',
         images: [
-            'https://imgur.com/gallery/hellstar-b-A3fNLUi'
+            'https://i.imgur.com/US4ahi3.png',
+            'https://i.imgur.com/8DboWKB.png',
         ],
         badge: 'Nuevo',
         sizes: ['XL']
