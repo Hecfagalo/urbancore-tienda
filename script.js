@@ -74,14 +74,14 @@ const productsData = [
         category: 'camisetas',
         price: 95900,
         originalPrice: null,
-        description: 'Camiseta básica de algodón premium. Versatil y cómoda para el día a día.',
+        description: 'Camiseta de la marca Hellstar, conocida por su estética punk-rock y gráficos de inspiración post-apocalíptica o "espacial".',
         image: 'https://i.imgur.com/US4ahi3.png',
         images: [
             'https://i.imgur.com/US4ahi3.png',
             'https://i.imgur.com/8DboWKB.png'
         ],
         badge: 'Nuevo',
-        sizes: ['S', 'M', 'L', 'XL'],
+        sizes: ['XL'],
         details: {
             brand: 'UrbanCore',
             artConcept: 'Frente: Presenta el logotipo de Hellstar en una tipografía de estilo graffiti o "distorsionada" con bordes blancos que resaltan sobre el fondo marrón (marron) de la prenda. Espalda: Incluye un gráfico complejo en blanco que muestra una silueta humana de la cual emanan rayos de luz o energía. En la parte superior se lee "Hellstar" con su característica estrella, y en la parte inferior la frase "VICTORY WITHIN" (La victoria está en el interior).',
@@ -91,49 +91,41 @@ const productsData = [
     },
     {
         id: 4,
-        name: 'T-Shirt Graphic Grey',
+        name: 'Camiseta SAINT THEORY',
         category: 'camisetas',
-        price: 49900,
+        price: 95900,
         originalPrice: null,
-        description: 'Camiseta con diseño gráfico urbano. Prints de alta calidad.',
-        image: 'https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=600&q=80',
+        description: 'Camiseta Divine Threads de la marca colombiana Saint Theory.',
+        image: 'https://i.imgur.com/Ktm6529.png',
         images: [
-            'https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=600&q=80',
-            'https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=600&q=80'
+            'https://i.imgur.com/Ktm6529.png',
+            'https://i.imgur.com/PKSCOv7.png'
         ],
         badge: null,
-        sizes: ['S', 'M', 'L', 'XL'],
+        sizes: ['XL'],
         details: {
             brand: 'UrbanCore',
-            artConcept: 'Ilustración exclusiva que fusiona elementos de la cultura urbana latinoamericana con referencias al diseño contemporáneo. Cada print es una obra de arte portátil.',
-            materials: 'Algodón ringspun de primera calidad. Impresión digital de alta resolución con tintas ecológicas a base de agua, sin químicos tóxicos.',
-            fit: 'Corte moderno con caída ligeramente más larga en la espalda. Cuello crew neck con doble stitching para mayor durabilidad.',
-            careInstructions: 'Lavar del revés para proteger el print. Agua fría. No restregar el área estampada. Secar a la sombra.',
-            origin: 'Arte original creado por artistas locales. Confección nacional.'
+            artConcept: 'Frente: Presenta un diseño minimalista con el nombre de la marca, "SAINT THEORY", estampado en el centro del pecho en una tipografía sencilla y limpia de color blanco. Espalda: Contiene el gráfico principal "Divine Threads". Este incluye: El nombre de la marca en letras grandes con un efecto de relieve azul metálico. Una cadena gruesa que rodea el texto y de la cual cuelga una cruz detallada en la parte inferior. Un par de alas extendidas que emergen de los laterales de la palabra "SAINT".',
+            materials: 'Confeccionada en algodón pesado, diseñada para tener una caída estructurada y una sensación de lujo.',
         }
     },
     {
         id: 5,
-        name: 'T-Shirt Oversize Blue',
+        name: 'Camiseta PSYCHO BUNNY',
         category: 'camisetas',
-        price: 55900,
+        price: 95900,
         originalPrice: null,
-        description: 'Camiseta oversize con corte moderno. Tejido suave y resistente.',
-        image: 'https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=600&q=80',
+        description: 'costuras selladas en los hombros y logotipos bordados o estampados con técnicas de alta calidad que resisten el desgaste.',
+        image: 'https://i.imgur.com/f0cMWfA.png',
         images: [
-            'https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=600&q=80',
-            'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&q=80',
-            'https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=600&q=80'
+            'https://i.imgur.com/f0cMWfA.png',
         ],
         badge: null,
-        sizes: ['S', 'M', 'L', 'XL'],
+        sizes: ['XL'],
         details: {
             brand: 'UrbanCore',
-            artConcept: 'La comodidad como declaración de estilo. El corte oversize representa libertad y actitud relajada sin perder la sofisticación.',
-            materials: 'Algodón orgánico heavy weight de 240 g/m². Estructura densa con tacto suave y caído impecable. Sin pilling.',
-            fit: 'Corte oversize pronunciado con hombros caídos. Mangas anchas. Recomendamos tu talla habitual para el look oversized o una talla menos para un fit más estructurado.',
-            careInstructions: 'Lavar en frío o a mano. No retorcer. Secar en horizontal para mantener la forma característica. Planchar a baja temperatura.',
-            origin: 'Diseñado en Colombia. Confección artesanal con materiales premium nacionales.'
+            artConcept: 'La prenda presenta el nombre "PSYCHO BUNNY" en el pecho con una tipografía audaz y de gran tamaño. A la izquierda del texto se encuentra el icónico logo de la calavera y las tibias cruzadas con orejas de conejo, el cual tiene un acabado que parece ser reflectante o con textura metálica sutil.',
+            materials: 'algodón Pima peruano en sus prendas, lo que garantiza una suavidad excepcional, durabilidad y que la prenda no pierda su forma con facilidad.',
         }
     },
     {
