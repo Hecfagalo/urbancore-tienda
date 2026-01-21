@@ -135,9 +135,9 @@ const productsData = [
         price: 59900,
         originalPrice: null,
         description: 'Camiseta premium de algodón orgánico. Acabados perfectos.',
-        image: 'https://images.unsplash.com/photo-1516826957135-700dedea698c?w=600&q=80',
+        image: 'https://i.imgur.com/VDH1YVw_d.png?maxwidth=520&shape=thumb&fidelity=high',
         images: [
-            'https://images.unsplash.com/photo-1516826957135-700dedea698c?w=600&q=80'
+            'https://i.imgur.com/VDH1YVw_d.png?maxwidth=520&shape=thumb&fidelity=high'
         ],
         badge: 'Nuevo',
         sizes: ['S', 'M', 'L', 'XL'],
