@@ -75,7 +75,7 @@ const productsData = [
         price: 95900,
         originalPrice: null,
         description: 'Camiseta básica de algodón premium. Versatil y cómoda para el día a día.',
-        image: 'hhttps://i.imgur.com/US4ahi3.png',
+        image: 'https://i.imgur.com/US4ahi3.png',
         images: [
             'https://i.imgur.com/US4ahi3.png',
             'https://i.imgur.com/8DboWKB.png'
