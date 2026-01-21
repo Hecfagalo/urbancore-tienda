@@ -130,9 +130,9 @@ const productsData = [
     },
     {
         id: 6,
-        name: 'T-Shirt Premium Red',
+        name: 'camiseta de la marca HUGO BOSS',
         category: 'camisetas',
-        price: 59900,
+        price: 95900,
         originalPrice: null,
         description: 'Camiseta premium de algodón orgánico. Acabados perfectos.',
         image: 'https://i.imgur.com/VDH1YVw_d.png?maxwidth=520&shape=thumb&fidelity=high',
@@ -140,13 +140,11 @@ const productsData = [
             'https://i.imgur.com/VDH1YVw_d.png?maxwidth=520&shape=thumb&fidelity=high'
         ],
         badge: 'Nuevo',
-        sizes: ['S', 'M', 'L', 'XL'],
+        sizes: ['XL'],
         details: {
             brand: 'UrbanCore',
-            artConcept: 'Elegancia en rouge. Un tono vibrante que transmite confianza y personalidad. Diseño minimalista para destacar la calidad del producto.',
-            materials: 'Algodón orgánico 100% certificado por GOTS y Fair Trade. Proceso de teñido natural sin químicos agresivos. Textura sedosa.',
-            fit: 'Corte premium ajustado. Costuras internas reforzadas y tapadas para máximo confort. Elástica y durable.',
-            careInstructions: 'Lavar del revés a 30°C con detergente neutro. No mezclar con prendas de color. Secado natural a la sombra.',
+            artConcept: 'Estampado de monograma a gran escala encerrado en un cuadro blanco. El diseño utiliza una tipografía entrelazada de la letra "B", creando un patrón geométrico moderno.',
+            materials: 'Algodón mercerizado o algodón elástico de alta calidad, proporcionando un tacto suave y un ligero brillo que denota elegancia.',
             origin: 'Producto premium fabricado en Colombia bajo estrictos estándares de sostenibilidad y calidad.'
         }
     },
