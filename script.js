@@ -19,55 +19,73 @@ const config = {
 };
 
 // ============================================
-// DATOS DE PRODUCTOS - 12 ARTÍCULOS
+// DATOS DE PRODUCTOS - 12 ARTÍCULOS CON DETALLES
 // ============================================
 // NOTA: El campo "image" es la imagen principal
 //       El campo "images" (array) incluye todas las imágenes del producto
+//       El campo "details" contiene información detallada del producto
 
 const productsData = [
     {
         id: 1,
-        name: 'Clemont Manos',
+        name: 'camiseta Manos',
         category: 'camisetas',
         price: 95900,
         originalPrice: 129900,
-        description: 'Esta es la camiseta "Manos" de la marca colombiana Clemont, una pieza representativa de su estilo streetwear con enfoque espiritual.',
+        description: 'Esta es la camiseta Manos de la marca colombiana Clemont',
         image: 'https://i.imgur.com/78nFB3O.png',
         images: [
-
         ],
-        badge: 'Oferta',
-        sizes: ['XL']
+        badge: Oferta,
+        sizes: ['XL'],
+        details: {
+            brand: 'UrbanCore',
+            artConcept: 'Gráfico Central: Presenta una reinterpretación de "La creación de Adán" de Miguel Ángel. Las manos están representadas con un estilo artístico moderno: una en un tono crema/dorado y la otra en un tono gris azulado, simbolizando la conexión entre lo terrenal y lo divino.',
+            Concepto: 'Estas prendas no son vistas solo como ropa, sino como "amuletos" que buscan elevar la energía de quien las usa',
+            materiales: 'algodones de alto gramaje para dar esa sensación de "lujo pesado" típica del streetwear de alta gama',
+            origin: 'Diseñado en Colombia. Confección nacional con materiales nacionales e importados.'
+        }
     },
     {
         id: 2,
-        name: 'Clemont Sagrado corazon',
+        name: 'Camiseta Sagrado corazon',
         category: 'camisetas',
         price: 95900,
         originalPrice: 129900,
-        description: 'Esta es la camiseta Sagrado Corazón de la marca colombiana Clemont, una pieza que profundiza en la estética mística y espiritual que caracteriza a la firma de Medellín.',
+        description: 'camiseta Sagrado Corazón de la marca colombiana Clemont.',
         image: 'https://i.imgur.com/wm8n4Pt.png',
         images: [
             'https://i.imgur.com/wm8n4Pt.png',
             'https://i.imgur.com/M3CxNVG.png',
         ],
         badge: 'Oferta',
-        sizes: ['XL']
+        sizes: ['XL'],
+        details: {
+            brand: 'UrbanCore',
+            artConcept: 'Iconografía Central: Presenta una ilustración detallada del Sagrado Corazón, rodeado por una corona de espinas verde y envuelto en llamas vibrantes de color naranja y amarillo.',
+            materials: 'Algodón de alta densidad (Heavyweight cotton), diseñado para mantener la estructura de la prenda y durabilidad del estampado.',
+            origin: 'Diseño colombiano. Fabricado con tecnología textil internacional.'
+        }
     },
     {
         id: 3,
-        name: 'HELLSTAR',
+        name: 'Camiseta HELLSTAR',
         category: 'camisetas',
         price: 95900,
         originalPrice: null,
-        description: 'Esta es una camiseta de la marca Hellstar, conocida por su estética punk-rock y gráficos de inspiración post-apocalíptica o "espacial" que han ganado gran popularidad en la escena del streetwear',
-        image: 'https://i.imgur.com/US4ahi3.png',
+        description: 'Camiseta básica de algodón premium. Versatil y cómoda para el día a día.',
+        image: 'https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=600&q=80',
         images: [
-            'https://i.imgur.com/US4ahi3.png',
-            'https://i.imgur.com/8DboWKB.png',
+            'https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=600&q=80'
         ],
         badge: 'Nuevo',
-        sizes: ['XL']
+        sizes: ['S', 'M', 'L', 'XL'],
+        details: {
+            brand: 'UrbanCore',
+            artConcept: 'Frente: Presenta el logotipo de Hellstar en una tipografía de estilo graffiti o "distorsionada" con bordes blancos que resaltan sobre el fondo marrón (marron) de la prenda. Espalda: Incluye un gráfico complejo en blanco que muestra una silueta humana de la cual emanan rayos de luz o energía. En la parte superior se lee "Hellstar" con su característica estrella, y en la parte inferior la frase "VICTORY WITHIN" (La victoria está en el interior).',
+            materials: 'Confeccionada en algodón pesado, diseñada para tener una caída estructurada y una sensación de lujo.',
+            origin: 'Producción colombiana con estándares de calidad internacional.'
+        }
     },
     {
         id: 4,
@@ -82,7 +100,15 @@ const productsData = [
             'https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=600&q=80'
         ],
         badge: null,
-        sizes: ['S', 'M', 'L', 'XL']
+        sizes: ['S', 'M', 'L', 'XL'],
+        details: {
+            brand: 'UrbanCore',
+            artConcept: 'Ilustración exclusiva que fusiona elementos de la cultura urbana latinoamericana con referencias al diseño contemporáneo. Cada print es una obra de arte portátil.',
+            materials: 'Algodón ringspun de primera calidad. Impresión digital de alta resolución con tintas ecológicas a base de agua, sin químicos tóxicos.',
+            fit: 'Corte moderno con caída ligeramente más larga en la espalda. Cuello crew neck con doble stitching para mayor durabilidad.',
+            careInstructions: 'Lavar del revés para proteger el print. Agua fría. No restregar el área estampada. Secar a la sombra.',
+            origin: 'Arte original creado por artistas locales. Confección nacional.'
+        }
     },
     {
         id: 5,
@@ -98,7 +124,15 @@ const productsData = [
             'https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=600&q=80'
         ],
         badge: null,
-        sizes: ['S', 'M', 'L', 'XL']
+        sizes: ['S', 'M', 'L', 'XL'],
+        details: {
+            brand: 'UrbanCore',
+            artConcept: 'La comodidad como declaración de estilo. El corte oversize representa libertad y actitud relajada sin perder la sofisticación.',
+            materials: 'Algodón orgánico heavy weight de 240 g/m². Estructura densa con tacto suave y caído impecable. Sin pilling.',
+            fit: 'Corte oversize pronunciado con hombros caídos. Mangas anchas. Recomendamos tu talla habitual para el look oversized o una talla menos para un fit más estructurado.',
+            careInstructions: 'Lavar en frío o a mano. No retorcer. Secar en horizontal para mantener la forma característica. Planchar a baja temperatura.',
+            origin: 'Diseñado en Colombia. Confección artesanal con materiales premium nacionales.'
+        }
     },
     {
         id: 6,
@@ -112,7 +146,15 @@ const productsData = [
             'https://images.unsplash.com/photo-1516826957135-700dedea698c?w=600&q=80'
         ],
         badge: 'Nuevo',
-        sizes: ['S', 'M', 'L', 'XL']
+        sizes: ['S', 'M', 'L', 'XL'],
+        details: {
+            brand: 'UrbanCore',
+            artConcept: 'Elegancia en rouge. Un tono vibrante que transmite confianza y personalidad. Diseño minimalista para destacar la calidad del producto.',
+            materials: 'Algodón orgánico 100% certificado por GOTS y Fair Trade. Proceso de teñido natural sin químicos agresivos. Textura sedosa.',
+            fit: 'Corte premium ajustado. Costuras internas reforzadas y tapadas para máximo confort. Elástica y durable.',
+            careInstructions: 'Lavar del revés a 30°C con detergente neutro. No mezclar con prendas de color. Secado natural a la sombra.',
+            origin: 'Producto premium fabricado en Colombia bajo estrictos estándares de sostenibilidad y calidad.'
+        }
     },
     {
         id: 7,
@@ -127,7 +169,15 @@ const productsData = [
             'https://images.unsplash.com/photo-1503341455253-dff4815485f1?w=600&q=80'
         ],
         badge: null,
-        sizes: ['S', 'M', 'L', 'XL']
+        sizes: ['S', 'M', 'L', 'XL'],
+        details: {
+            brand: 'UrbanCore',
+            artConcept: 'Encarna la esencia de la noche urbana. Un diseño que habla de las calles después del anochecer, de la energía nocturna y el misterio.',
+            materials: 'Mezcla premium de 90% algodón peinado y 10% viscosa. Acabado matte elegante con brillo sutil. Tejido compacto de 180 g/m².',
+            fit: 'Corte straight fit versátil. Altura de pecho equilibrada. Mangas con abertura ligeramente más amplia para movilidad.',
+            careInstructions: 'Lavado a máquina en programa para prendas oscuras. No usar directamente la secadora. Planchar del revés.',
+            origin: 'Diseñado y confeccionado en Colombia con materiales de alta calidad.'
+        }
     },
     {
         id: 8,
@@ -142,7 +192,15 @@ const productsData = [
             'https://images.unsplash.com/photo-1562157873-818bc0726f68?w=600&q=80'
         ],
         badge: 'Oferta',
-        sizes: ['S', 'M', 'L', 'XL']
+        sizes: ['S', 'M', 'L', 'XL'],
+        details: {
+            brand: 'UrbanCore',
+            artConcept: 'La reinterpretación del clásico atemporal. Un polo que trasciende temporadas, combinando tradición y modernidad en cada detalle.',
+            materials: '100% Algodón peinado de fibra larga. Cuello con estructura de doble capa y botones de nácar natural. Refuerzos en hombros.',
+            fit: 'Corte clásico con caída recta. Largo que queda bien puesto por dentro o por fuera del pantalón. Mangas que cubren el bíceps.',
+            careInstructions: 'Lavar a máquina a temperatura media. Planchar el cuello y los botones con cuidado. No usar secado a máquina para mantener la forma.',
+            origin: 'Confección nacional con tradición en textiles de alta calidad.'
+        }
     },
     {
         id: 9,
@@ -158,7 +216,15 @@ const productsData = [
             'https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=600&q=80'
         ],
         badge: null,
-        sizes: ['S', 'M', 'L', 'XL']
+        sizes: ['S', 'M', 'L', 'XL'],
+        details: {
+            brand: 'UrbanCore',
+            artConcept: 'Un viaje al pasado con mirada futurista. El verde vintage evoca naturaleza, serenidad y una conexión con lo auténtico.',
+            materials: 'Algodón slub con textura irregular característica del tejido vintage. 100% natural con proceso de lavado enzimático para suavidad extrema.',
+            fit: 'Corte relajado con caída fluida. El cuello ribeteado tiene un aspecto ligeramente usado pero cuidado. Largo perfecto.',
+            careInstructions: 'Lavar a mano o ciclo delicado. El color mejorará con cada lavado. Secar colgado. No necesita planchado excesivo.',
+            origin: 'Diseño colombiano inspirado en la tradición textil nacional.'
+        }
     },
     {
         id: 10,
@@ -173,7 +239,15 @@ const productsData = [
             'https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=600&q=80'
         ],
         badge: 'Oferta',
-        sizes: ['S', 'M', 'L', 'XL']
+        sizes: ['S', 'M', 'L', 'XL'],
+        details: {
+            brand: 'UrbanCore',
+            artConcept: 'Diseñada para quienes no conocen límites. Cada detalle responde a la necesidad de rendimiento máximo sin sacrificar estilo.',
+            materials: 'Tejido técnico de última generación: 88% poliéster recycled y 12% spandex. Gestión de humedad, protección UV y antibacterial.',
+            fit: 'Corte compression fitted que soporta los músculos. Recomendamos tu talla habitual. Seamless (sin costuras) en zonas de fricción.',
+            careInstructions: 'Lavado en frío a 30°C. No usar suavizante. Secado al aire libre. No planchar ni blanquear.',
+            origin: 'Tecnología textil desarrollada con estándares internacionales de rendimiento.'
+        }
     },
     {
         id: 11,
@@ -187,7 +261,15 @@ const productsData = [
             'https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=600&q=80'
         ],
         badge: null,
-        sizes: ['S', 'M', 'L', 'XL']
+        sizes: ['S', 'M', 'L', 'XL'],
+        details: {
+            brand: 'UrbanCore',
+            artConcept: 'La filosofía del menos es más. Un diseño tan simple que se convierte en statement. Versatilidad absoluta para cualquier ocasión.',
+            materials: 'Algodón francés de 160 g/m² con textura sutil. Sin etiquetas internas, solo impresión de información en el cuello.',
+            fit: 'Corte boxy contemporáneo. Recto en el cuerpo con caída cuadrada. Mangas cortas con doble stitching. Un básico redefinido.',
+            careInstructions: 'Lavado a máquina hasta 40°C. Secado a temperatura baja. Planchar a vapor para mantener la textura.',
+            origin: 'Diseñado en Colombia con algodón de primera calidad.'
+        }
     },
     {
         id: 12,
@@ -203,7 +285,15 @@ const productsData = [
             'https://images.unsplash.com/photo-1562157873-818bc0726f68?w=600&q=80'
         ],
         badge: 'Nuevo',
-        sizes: ['S', 'M', 'L', 'XL']
+        sizes: ['S', 'M', 'L', 'XL'],
+        details: {
+            brand: 'UrbanCore',
+            artConcept: 'La sofisticación en su expresión más pura. Un gris profundo que transmite seriedad, elegancia y confianza.',
+            materials: 'Piqué premium de algodón con textura característica. Cuello de doble capa con interlock interior para mantener la forma. Botones personalizados.',
+            fit: 'Corte slim fit elegante. Ajuste más definido en la cintura. Perfecto para ocasiones especiales o el trabajo.',
+            careInstructions: 'Lavado a máquina en ciclo delicado. Planchar inmediatamente para mejores resultados. Guardar colgado.',
+            origin: 'Confección nacional con acabados de alta sastrería.'
+        }
     }
 ];
 
@@ -231,6 +321,7 @@ function initApp() {
     setupSmoothScroll();
     setupAnimations();
     setupLightbox();
+    setupDetailsButtons();
 }
 
 // ============================================
@@ -258,6 +349,9 @@ function renderProducts(products) {
     
     // Añadir event listeners a las miniaturas
     setupThumbnailClicks();
+    
+    // Añadir event listeners a los botones de detalles
+    setupDetailsButtons();
     
     // Reiniciar animaciones
     setupAnimations();
@@ -337,6 +431,13 @@ function createProductCard(product) {
                     ${originalPriceHTML}
                 </div>
                 ${descriptionHTML}
+                <button class="btn-details-product" data-product-id="${product.id}">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M12 16v-4M12 8h.01"/>
+                    </svg>
+                    Ver Detalles
+                </button>
                 <button class="btn-whatsapp-product" data-product="${encodeURIComponent(JSON.stringify(product))}">
                     <svg viewBox="0 0 24 24" fill="currentColor">
                         <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
@@ -408,6 +509,107 @@ function getCategoryLabel(category) {
         'accesorios': 'Accesorios'
     };
     return labels[category] || category;
+}
+
+// ============================================
+// MODAL DE DETALLES DE PRODUCTO
+// ============================================
+
+function setupDetailsButtons() {
+    const buttons = document.querySelectorAll('.btn-details-product');
+    
+    buttons.forEach(button => {
+        button.addEventListener('click', function() {
+            const productId = parseInt(this.dataset.productId);
+            const product = productsData.find(p => p.id === productId);
+            
+            if (product) {
+                openProductModal(product);
+            }
+        });
+    });
+}
+
+function openProductModal(product) {
+    const modal = document.getElementById('product-detail-modal');
+    
+    if (!modal) {
+        console.warn('Modal de detalles no encontrado');
+        return;
+    }
+    
+    // Llenar la información del producto en el modal
+    document.getElementById('detail-name').textContent = product.name;
+    document.getElementById('detail-category').textContent = getCategoryLabel(product.category);
+    document.getElementById('detail-price').textContent = formatPrice(product.price);
+    
+    // Llenar los detalles específicos
+    if (product.details) {
+        document.getElementById('detail-brand').textContent = product.details.brand || 'No disponible';
+        document.getElementById('detail-art-concept').textContent = product.details.artConcept || 'No disponible';
+        document.getElementById('detail-materials').textContent = product.details.materials || 'No disponible';
+        document.getElementById('detail-fit').textContent = product.details.fit || 'No disponible';
+        document.getElementById('detail-care').textContent = product.details.careInstructions || 'No disponible';
+        document.getElementById('detail-origin').textContent = product.details.origin || 'No disponible';
+    }
+    
+    // Configurar la imagen principal del modal
+    const modalMainImage = document.getElementById('detail-main-image');
+    if (modalMainImage && product.image) {
+        modalMainImage.src = product.image;
+        modalMainImage.alt = product.name;
+    }
+    
+    // Generar miniaturas del modal
+    const modalThumbnails = document.getElementById('detail-thumbnails');
+    if (modalThumbnails && product.images) {
+        let thumbnailsHTML = '';
+        product.images.forEach((img, index) => {
+            thumbnailsHTML += `
+                <div class="detail-thumbnail ${index === 0 ? 'active' : ''}" data-image="${img}" data-index="${index}">
+                    <img src="${img}" alt="Imagen ${index + 1}" loading="lazy">
+                </div>
+            `;
+        });
+        modalThumbnails.innerHTML = thumbnailsHTML;
+        
+        // Configurar clics en miniaturas del modal
+        modalThumbnails.querySelectorAll('.detail-thumbnail').forEach(thumb => {
+            thumb.addEventListener('click', function() {
+                const newImage = this.dataset.image;
+                modalMainImage.src = newImage;
+                
+                // Actualizar estado active
+                modalThumbnails.querySelectorAll('.detail-thumbnail').forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    }
+    
+    // Configurar el botón de WhatsApp del modal
+    const modalWhatsAppBtn = document.getElementById('detail-whatsapp-btn');
+    if (modalWhatsAppBtn) {
+        modalWhatsAppBtn.onclick = function() {
+            openWhatsApp(product);
+        };
+    }
+    
+    // Mostrar el modal
+    modal.classList.add('active');
+    document.body.classList.add('modal-open');
+    
+    // Prevenir scroll en el body
+    document.body.style.overflow = 'hidden';
+}
+
+function closeProductModal() {
+    const modal = document.getElementById('product-detail-modal');
+    
+    if (modal) {
+        modal.classList.remove('active');
+        document.body.classList.remove('modal-open');
+        document.body.style.overflow = '';
+    }
 }
 
 // ============================================
@@ -512,6 +714,7 @@ function loadMoreProducts() {
     // Configurar event listeners para los nuevos botones
     setupWhatsAppButtons();
     setupThumbnailClicks();
+    setupDetailsButtons();
     
     // Añadir animaciones a los nuevos productos
     const newCards = grid.querySelectorAll('.product-card:not([style*="opacity: 0"])');
@@ -991,6 +1194,41 @@ window.addEventListener('scroll', function() {
 });
 
 // ============================================
+// CONFIGURACIÓN DE EVENTOS DEL MODAL DE DETALLES
+// ============================================
+
+function setupProductModalEvents() {
+    const modal = document.getElementById('product-detail-modal');
+    
+    if (!modal) return;
+    
+    // Botón cerrar del modal
+    const closeBtn = modal.querySelector('.detail-modal-close');
+    if (closeBtn) {
+        closeBtn.addEventListener('click', closeProductModal);
+    }
+    
+    // Cerrar al hacer clic fuera del contenido
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+            closeProductModal();
+        }
+    });
+    
+    // Cerrar con la tecla Escape
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+            closeProductModal();
+        }
+    });
+}
+
+// Inicializar eventos del modal cuando el DOM esté listo
+document.addEventListener('DOMContentLoaded', function() {
+    setupProductModalEvents();
+});
+
+// ============================================
 // EXPORTAR PARA USO EXTERNO
 // ============================================
 
@@ -999,7 +1237,9 @@ window.UrbanCore = {
     productsData,
     refreshProducts: () => filterProducts(currentCategory),
     showToast,
-    openWhatsApp: openWhatsAppGeneric
+    openWhatsApp: openWhatsAppGeneric,
+    openProductModal,
+    closeProductModal
 };
 
 console.log('UrbanCore - Tienda Online cargada correctamente');
