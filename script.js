@@ -35,14 +35,15 @@ const productsData = [
         description: 'Esta es la camiseta Manos de la marca colombiana Clemont',
         image: 'https://i.imgur.com/78nFB3O.png',
         images: [
+            'https://i.imgur.com/78nFB3O.png'
         ],
-        badge: Oferta,
+        badge: 'Oferta',
         sizes: ['XL'],
         details: {
             brand: 'UrbanCore',
             artConcept: 'Gráfico Central: Presenta una reinterpretación de "La creación de Adán" de Miguel Ángel. Las manos están representadas con un estilo artístico moderno: una en un tono crema/dorado y la otra en un tono gris azulado, simbolizando la conexión entre lo terrenal y lo divino.',
             Concepto: 'Estas prendas no son vistas solo como ropa, sino como "amuletos" que buscan elevar la energía de quien las usa',
-            materiales: 'algodones de alto gramaje para dar esa sensación de "lujo pesado" típica del streetwear de alta gama',
+            materiales: 'algodones de alto gramajes para dar esa sensación de "lujo pesado" típica del streetwear de alta gama',
             origin: 'Diseñado en Colombia. Confección nacional con materiales nacionales e importados.'
         }
     },
@@ -166,7 +167,7 @@ const productsData = [
         image: 'https://images.unsplash.com/photo-1617127365659-c47fa864d8bc?w=600&q=80',
         images: [
             'https://images.unsplash.com/photo-1617127365659-c47fa864d8bc?w=600&q=80',
-            'https://images.unsplash.com/photo-1503341455253-dff4815485f1?w=600&q=80'
+            'https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=600&q=80'
         ],
         badge: null,
         sizes: ['S', 'M', 'L', 'XL'],
@@ -1227,6 +1228,70 @@ function setupProductModalEvents() {
 document.addEventListener('DOMContentLoaded', function() {
     setupProductModalEvents();
 });
+
+// ============================================
+// FUNCIÓN TOAST NOTIFICATIONS
+// ============================================
+
+function showToast(message, type = 'info') {
+    // Eliminar toast anterior si existe
+    const existingToast = document.querySelector('.toast-notification');
+    if (existingToast) {
+        existingToast.remove();
+    }
+    
+    // Crear elemento toast
+    const toast = document.createElement('div');
+    toast.className = `toast-notification toast-${type}`;
+    toast.innerHTML = `
+        <span class="toast-message">${message}</span>
+        <button class="toast-close">&times;</button>
+    `;
+    
+    // Estilos inline para el toast
+    toast.style.cssText = `
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        padding: 16px 20px;
+        border-radius: 8px;
+        background: ${type === 'success' ? '#10B981' : type === 'error' ? '#EF4444' : '#3B82F6'};
+        color: white;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        z-index: 10000;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        animation: toastSlideIn 0.3s ease;
+        max-width: 350px;
+        font-family: system-ui, -apple-system, sans-serif;
+    `;
+    
+    // Agregar al DOM
+    document.body.appendChild(toast);
+    
+    // Botón cerrar
+    const closeBtn = toast.querySelector('.toast-close');
+    closeBtn.style.cssText = `
+        background: none;
+        border: none;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+        padding: 0;
+        line-height: 1;
+        opacity: 0.8;
+    `;
+    closeBtn.addEventListener('click', () => toast.remove());
+    
+    // Auto cerrar después de 3 segundos
+    setTimeout(() => {
+        if (toast.parentElement) {
+            toast.style.animation = 'toastSlideOut 0.3s ease';
+            setTimeout(() => toast.remove(), 300);
+        }
+    }, 3000);
+}
 
 // ============================================
 // EXPORTAR PARA USO EXTERNO
