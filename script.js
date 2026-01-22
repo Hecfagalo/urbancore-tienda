@@ -130,7 +130,7 @@ const productsData = [
     },
     {
         id: 6,
-        name: 'camiseta de la marca HUGO BOSS',
+        name: 'camiseta HUGO BOSS',
         category: 'camisetas',
         price: 95900,
         originalPrice: null,
@@ -150,116 +150,107 @@ const productsData = [
     },
     {
         id: 7,
-        name: 'Camiseta Urbana Dark',
+        name: 'Camiseta Adidas',
         category: 'camisetas',
-        price: 42900,
+        price: 59900,
         originalPrice: null,
-        description: 'Diseño urbano contemporáneo en color negro. Perfecta para cualquier ocasión.',
-        image: 'https://images.unsplash.com/photo-1617127365659-c47fa864d8bc?w=600&q=80',
+        description: 'Diseño minimalista y moderno, alejándose del uso tradicional de las tres rayas en las mangas',
+        image: 'https://i.imgur.com/mX93uui_d.png?maxwidth=520&shape=thumb&fidelity=high',
         images: [
-            'https://images.unsplash.com/photo-1617127365659-c47fa864d8bc?w=600&q=80',
-            'https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=600&q=80'
+            'https://i.imgur.com/mX93uui_d.png?maxwidth=520&shape=thumb&fidelity=high'
         ],
         badge: null,
-        sizes: ['S', 'M', 'L', 'XL'],
+        sizes: ['XL'],
         details: {
             brand: 'UrbanCore',
-            artConcept: 'Encarna la esencia de la noche urbana. Un diseño que habla de las calles después del anochecer, de la energía nocturna y el misterio.',
-            materials: 'Mezcla premium de 90% algodón peinado y 10% viscosa. Acabado matte elegante con brillo sutil. Tejido compacto de 180 g/m².',
-            fit: 'Corte straight fit versátil. Altura de pecho equilibrada. Mangas con abertura ligeramente más amplia para movilidad.',
+            artConcept: 'Logotipo: Justo debajo de las líneas se encuentra el icónico logotipo Performance de Adidas (las tres barras inclinadas) junto con el nombre de la marca en letras minúsculas. Color: La prenda es de un tono verde oscuro (bosque) sólido, lo que hace que los detalles en blanco resalten significativamente. Detalles Técnicos: Presenta un cuello redondo clásico acanalado y mangas cortas con costuras reforzadas. Incluye la etiqueta original colgante en el cuello, lo que confirma que es un artículo nuevo..',
+            materials: 'mezclas de algodón sostenible (a través de Better Cotton Initiative) o poliéster reciclado en sus camisetas básicas para garantizar comodidad y una gestión eficiente de la humedad',
+            fit: 'Al no tener las rayas en los hombros, ofrece un aspecto más sobrio, ideal para combinar con jeans o pantalones casuales sin parecer ropa exclusivamente de entrenamiento.',
             careInstructions: 'Lavado a máquina en programa para prendas oscuras. No usar directamente la secadora. Planchar del revés.',
             origin: 'Diseñado y confeccionado en Colombia con materiales de alta calidad.'
         }
     },
     {
         id: 8,
-        name: 'Polo Classic White',
+        name: 'camiseta Amiri',
         category: 'camisetas',
-        price: 48900,
+        price: 59900,
         originalPrice: 59000,
-        description: 'Polo clásico de corte regular. Algodón peinado de alta calidad.',
-        image: 'https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=600&q=80',
+        description: 'pieza esencial que refleja la estética del rock and roll.',
+        image: 'https://i.imgur.com/VzhuhDs_d.png?maxwidth=520&shape=thumb&fidelity=high',
         images: [
-            'https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=600&q=80',
-            'https://images.unsplash.com/photo-1562157873-818bc0726f68?w=600&q=80'
+            'https://i.imgur.com/VzhuhDs_d.png?maxwidth=520&shape=thumb&fidelity=high'
         ],
         badge: 'Oferta',
-        sizes: ['S', 'M', 'L', 'XL'],
+        sizes: ['XL'],
         details: {
             brand: 'UrbanCore',
-            artConcept: 'La reinterpretación del clásico atemporal. Un polo que trasciende temporadas, combinando tradición y modernidad en cada detalle.',
-            materials: '100% Algodón peinado de fibra larga. Cuello con estructura de doble capa y botones de nácar natural. Refuerzos en hombros.',
-            fit: 'Corte clásico con caída recta. Largo que queda bien puesto por dentro o por fuera del pantalón. Mangas que cubren el bíceps.',
-            careInstructions: 'Lavar a máquina a temperatura media. Planchar el cuello y los botones con cuidado. No usar secado a máquina para mantener la forma.',
-            origin: 'Confección nacional con tradición en textiles de alta calidad.'
+            artConcept: 'La prenda sigue un enfoque minimalista y de lujo directo, donde el protagonismo absoluto lo tiene la identidad de la marca. Presenta el logotipo "AMIRI" estampado en el centro del pecho en un vibrante color rojo, creando un contraste clásico y potente sobre la base negra. Representa la visión de Mike Amiri de elevar las prendas básicas del guardarropa cotidiano a piezas de estatus mediante tipografías limpias y materiales premium',
+            materials: 'Ccnfeccionada en 100% algodón Supima o algodón de jersey de alta calidad.',
+            fit: 'Posee un corte clásico o "Standard Fit". A diferencia de las marcas de streetwear puras que son muy anchas, Amiri suele optar por una silueta más estilizada que se ajusta bien a los hombros y cae de forma recta, proporcionando una apariencia pulida.',
+            careInstructions: 'Se recomienda lavar a mano o en ciclo delicado con agua fría para preservar el estampado rojo',
         }
     },
     {
         id: 9,
-        name: 'T-Shirt Vintage Green',
+        name: 'Camiseta HUGO BOSS',
         category: 'camisetas',
-        price: 51900,
+        price: 59900,
         originalPrice: null,
-        description: 'Estilo vintage con tintes ecológicos. Suavidad excepcional.',
-        image: 'https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=600&q=80',
+        description: 'Prenda que combina la identidad clásica de la sastrería alemana con un estilo casual y gráfico.',
+        image: 'https://i.imgur.com/hVYumiP_d.png?maxwidth=520&shape=thumb&fidelity=high',
         images: [
-            'https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=600&q=80',
-            'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&q=80',
-            'https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=600&q=80'
+            'https://i.imgur.com/hVYumiP_d.png?maxwidth=520&shape=thumb&fidelity=high'
         ],
         badge: null,
-        sizes: ['S', 'M', 'L', 'XL'],
+        sizes: ['XL'],
         details: {
             brand: 'UrbanCore',
-            artConcept: 'Un viaje al pasado con mirada futurista. El verde vintage evoca naturaleza, serenidad y una conexión con lo auténtico.',
-            materials: 'Algodón slub con textura irregular característica del tejido vintage. 100% natural con proceso de lavado enzimático para suavidad extrema.',
-            fit: 'Corte relajado con caída fluida. El cuello ribeteado tiene un aspecto ligeramente usado pero cuidado. Largo perfecto.',
-            careInstructions: 'Lavar a mano o ciclo delicado. El color mejorará con cada lavado. Secar colgado. No necesita planchado excesivo.',
-            origin: 'Diseño colombiano inspirado en la tradición textil nacional.'
+            artConcept: 'El diseño se centra en la logomanía moderna. Presenta el nombre "BOSS" en letras grandes con un patrón de rayas diagonales internas, lo que le da dinamismo visual al bloque de texto. Incluye el nombre completo "HUGO BOSS" justo debajo en una tipografía más pequeña y limpia..',
+            materials: 'Confeccionada típicamente en jersey de algodón 100% de alta calidad. El tejido está diseñado para ser suave al tacto, transpirable y con un acabado ligeramente mate que caracteriza a las prendas premium de la marca.',
+            fit: 'Posee un corte regular o "Regular Fit". Está diseñada para ofrecer una silueta cómoda y equilibrada, con hombros en su sitio y una caída recta que no se ajusta demasiado al cuerpo, permitiendo versatilidad en el uso diario.',
+            careInstructions: 'No utilizar lejía ni blanqueadores para proteger la integridad del algodón y el estampado negro.',
         }
     },
     {
         id: 10,
-        name: 'Camiseta Performance',
+        name: 'Camiseta Nike',
         category: 'camisetas',
-        price: 64900,
+        price: 59900,
         originalPrice: 79000,
-        description: 'Tecnología de alto rendimiento. Secado rápido y compresión ideal.',
-        image: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&q=80',
+        description: 'Diseñada específicamente para ofrecer un rendimiento óptimo con una estética técnica y minimalista.',
+        image: 'https://i.imgur.com/vVrhOzm_d.png?maxwidth=520&shape=thumb&fidelity=high',
         images: [
-            'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&q=80',
-            'https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=600&q=80'
+            'https://i.imgur.com/vVrhOzm_d.png?maxwidth=520&shape=thumb&fidelity=high',
         ],
         badge: 'Oferta',
-        sizes: ['S', 'M', 'L', 'XL'],
+        sizes: ['XL'],
         details: {
             brand: 'UrbanCore',
-            artConcept: 'Diseñada para quienes no conocen límites. Cada detalle responde a la necesidad de rendimiento máximo sin sacrificar estilo.',
-            materials: 'Tejido técnico de última generación: 88% poliéster recycled y 12% spandex. Gestión de humedad, protección UV y antibacterial.',
-            fit: 'Corte compression fitted que soporta los músculos. Recomendamos tu talla habitual. Seamless (sin costuras) en zonas de fricción.',
-            careInstructions: 'Lavado en frío a 30°C. No usar suavizante. Secado al aire libre. No planchar ni blanquear.',
+            artConcept: 'La prenda sigue una línea de diseño minimalista y monocromático, utilizando una paleta de colores tierra (marrón suave/topo) que es tendencia tanto en el deporte como en el estilo lifestyle. El diseño destaca por su branding tonal, donde el icónico Swoosh y la palabra "NIKE" están centrados en el pecho en un gris grafito que no rompe la armonía visual de la pieza. Transmite un concepto de "atleta moderno", enfocándose en la funcionalidad sin necesidad de gráficos excesivos.',
+            materials: 'Tejido técnico de última generación: 88% poliéster recycled y 12% spandex.',
+            fit: 'Este corte ofrece una sensación relajada y cómoda que no se adhiere excesivamente a la piel, permitiendo un rango completo de movimiento',
             origin: 'Tecnología textil desarrollada con estándares internacionales de rendimiento.'
         }
     },
     {
         id: 11,
-        name: 'T-Shirt Minimalist Beige',
+        name: 'Camiseta PUMA',
         category: 'camisetas',
-        price: 44900,
+        price: 59900,
         originalPrice: null,
-        description: 'Diseño minimalista para un look sofisticado. Versatilidad garantizada.',
-        image: 'https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=600&q=80',
+        description: 'diseño inspirado en la estética universitaria clásica (varsity style) adaptada al mundo de la ropa deportiva moderna.',
+        image: 'https://i.imgur.com/SHcrFRy_d.png?maxwidth=520&shape=thumb&fidelity=high',
         images: [
-            'https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=600&q=80'
+            'https://i.imgur.com/SHcrFRy_d.png?maxwidth=520&shape=thumb&fidelity=high'
         ],
         badge: null,
-        sizes: ['S', 'M', 'L', 'XL'],
+        sizes: ['XL'],
         details: {
             brand: 'UrbanCore',
-            artConcept: 'La filosofía del menos es más. Un diseño tan simple que se convierte en statement. Versatilidad absoluta para cualquier ocasión.',
-            materials: 'Algodón francés de 160 g/m² con textura sutil. Sin etiquetas internas, solo impresión de información en el cuello.',
-            fit: 'Corte boxy contemporáneo. Recto en el cuerpo con caída cuadrada. Mangas cortas con doble stitching. Un básico redefinido.',
-            careInstructions: 'Lavado a máquina hasta 40°C. Secado a temperatura baja. Planchar a vapor para mantener la textura.',
+            artConcept: 'El diseño se basa en un concepto retro de academia o deportes universitarios. Presenta la palabra "PUMA" en una tipografía de arco con bloques rojos y bordes negros, un estilo muy común en los uniformes deportivos de las universidades estadounidenses. Debajo del nombre principal, incluye el icónico logotipo del felino saltando (Puma Cat) y la palabra "SPORTS" en rojo, reforzando la herencia atlética de la marca de una manera nostálgica..',
+            materials: 'Confeccionada en 100% algodón o una mezcla de algodón con poliéster para mayor suavidad. Utiliza un tejido de punto sencillo (jersey) que es ligero y transpirable, ideal para el uso cotidiano..',
+            fit: 'Regular Fit" (Ajuste Regular).',
             origin: 'Diseñado en Colombia con algodón de primera calidad.'
         }
     },
