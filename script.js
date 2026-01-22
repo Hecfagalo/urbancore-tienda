@@ -28,11 +28,11 @@ const config = {
 const productsData = [
     {
         id: 1,
-        name: 'camiseta Manos',
-        category: 'camisetas',
+        name: 'Camiseta Manos',
+        category: 'Camisetas',
         price: 95900,
         originalPrice: 129900,
-        description: 'Esta es la camiseta Manos de la marca colombiana Clemont',
+        description: 'Esta es la camiseta "Manos" de la marca colombiana Clemont',
         image: 'https://i.imgur.com/78nFB3O.png',
         images: [
             'https://i.imgur.com/78nFB3O.png'
@@ -43,17 +43,17 @@ const productsData = [
             brand: 'UrbanCore',
             artConcept: 'Gráfico Central: Presenta una reinterpretación de "La creación de Adán" de Miguel Ángel. Las manos están representadas con un estilo artístico moderno: una en un tono crema/dorado y la otra en un tono gris azulado, simbolizando la conexión entre lo terrenal y lo divino.',
             Concepto: 'Estas prendas no son vistas solo como ropa, sino como "amuletos" que buscan elevar la energía de quien las usa',
-            materiales: 'algodones de alto gramajes para dar esa sensación de "lujo pesado" típica del streetwear de alta gama',
+            materiales: 'Algodones de alto gramajes para dar esa sensación de "lujo pesado" típica del streetwear de alta gama',
             origin: 'Diseñado en Colombia. Confección nacional con materiales nacionales e importados.'
         }
     },
     {
         id: 2,
         name: 'Camiseta Sagrado corazon',
-        category: 'camisetas',
+        category: 'Camisetas',
         price: 95900,
         originalPrice: 129900,
-        description: 'camiseta Sagrado Corazón de la marca colombiana Clemont.',
+        description: 'Camiseta Sagrado Corazón de la marca colombiana Clemont.',
         image: 'https://i.imgur.com/wm8n4Pt.png',
         images: [
             'https://i.imgur.com/wm8n4Pt.png',
@@ -71,7 +71,7 @@ const productsData = [
     {
         id: 3,
         name: 'Camiseta HELLSTAR',
-        category: 'camisetas',
+        category: 'Camisetas',
         price: 95900,
         originalPrice: null,
         description: 'Camiseta de la marca Hellstar, conocida por su estética punk-rock y gráficos de inspiración post-apocalíptica o "espacial".',
@@ -92,16 +92,16 @@ const productsData = [
     {
         id: 4,
         name: 'Camiseta SAINT THEORY',
-        category: 'camisetas',
+        category: 'Camisetas',
         price: 95900,
-        originalPrice: null,
+        originalPrice: 129900,
         description: 'Camiseta Divine Threads de la marca colombiana Saint Theory.',
         image: 'https://i.imgur.com/Ktm6529.png',
         images: [
             'https://i.imgur.com/Ktm6529.png',
             'https://i.imgur.com/PKSCOv7.png'
         ],
-        badge: null,
+        badge: 'Nuevo',
         sizes: ['XL'],
         details: {
             brand: 'UrbanCore',
@@ -112,15 +112,15 @@ const productsData = [
     {
         id: 5,
         name: 'Camiseta PSYCHO BUNNY',
-        category: 'camisetas',
+        category: 'Camisetas',
         price: 95900,
-        originalPrice: null,
-        description: 'costuras selladas en los hombros y logotipos bordados o estampados con técnicas de alta calidad que resisten el desgaste.',
+        originalPrice: 129900,
+        description: 'Costuras selladas en los hombros y logotipos bordados o estampados con técnicas de alta calidad que resisten el desgaste.',
         image: 'https://i.imgur.com/f0cMWfA.png',
         images: [
             'https://i.imgur.com/f0cMWfA.png',
         ],
-        badge: null,
+        badge: 'Oferta',
         sizes: ['XL'],
         details: {
             brand: 'UrbanCore',
@@ -130,8 +130,8 @@ const productsData = [
     },
     {
         id: 6,
-        name: 'camiseta HUGO BOSS',
-        category: 'camisetas',
+        name: 'Camiseta HUGO BOSS',
+        category: 'Camisetas',
         price: 95900,
         originalPrice: null,
         description: 'Camiseta premium de algodón orgánico. Acabados perfectos.',
@@ -151,7 +151,7 @@ const productsData = [
     {
         id: 7,
         name: 'Camiseta Adidas',
-        category: 'camisetas',
+        category: 'Camisetas',
         price: 59900,
         originalPrice: null,
         description: 'Diseño minimalista y moderno, alejándose del uso tradicional de las tres rayas en las mangas',
@@ -159,7 +159,7 @@ const productsData = [
         images: [
             'https://i.imgur.com/mX93uui_d.png?maxwidth=520&shape=thumb&fidelity=high'
         ],
-        badge: null,
+        badge: 'Nuevo',
         sizes: ['XL'],
         details: {
             brand: 'UrbanCore',
@@ -172,8 +172,8 @@ const productsData = [
     },
     {
         id: 8,
-        name: 'camiseta Amiri',
-        category: 'camisetas',
+        name: 'Camiseta Amiri',
+        category: 'Camisetas',
         price: 59900,
         originalPrice: 59000,
         description: 'pieza esencial que refleja la estética del rock and roll.',
@@ -194,7 +194,7 @@ const productsData = [
     {
         id: 9,
         name: 'Camiseta HOLLISTER',
-        category: 'camisetas',
+        category: 'Camisetas',
         price: 59900,
         originalPrice: null,
         description: 'Prenda básica que captura la esencia del estilo de vida relajado de la costa oeste.',
@@ -202,7 +202,7 @@ const productsData = [
         images: [
             'https://i.imgur.com/hVYumiP_d.png?maxwidth=520&shape=thumb&fidelity=high'
         ],
-        badge: null,
+        badge: 'Nuevo',
         sizes: ['XL'],
         details: {
             brand: 'UrbanCore',
@@ -215,7 +215,7 @@ const productsData = [
     {
         id: 10,
         name: 'Camiseta Nike',
-        category: 'camisetas',
+        category: 'Camisetas',
         price: 59900,
         originalPrice: 79000,
         description: 'Diseñada específicamente para ofrecer un rendimiento óptimo con una estética técnica y minimalista.',
@@ -236,15 +236,15 @@ const productsData = [
     {
         id: 11,
         name: 'Camiseta PUMA',
-        category: 'camisetas',
+        category: 'Camisetas',
         price: 59900,
-        originalPrice: null,
+        originalPrice: 79900,
         description: 'diseño inspirado en la estética universitaria clásica (varsity style) adaptada al mundo de la ropa deportiva moderna.',
         image: 'https://i.imgur.com/SHcrFRy_d.png?maxwidth=520&shape=thumb&fidelity=high',
         images: [
             'https://i.imgur.com/SHcrFRy_d.png?maxwidth=520&shape=thumb&fidelity=high'
         ],
-        badge: null,
+        badge: 'Oferta',
         sizes: ['XL'],
         details: {
             brand: 'UrbanCore',
@@ -257,7 +257,7 @@ const productsData = [
     {
         id: 12,
         name: 'Camiseta HUGOO BOSS',
-        category: 'camisetas',
+        category: 'Camisetas',
         price: 59900,
         originalPrice: null,
         description: 'Prenda que combina la identidad clásica de la sastrería alemana con un estilo casual y gráfico.',
