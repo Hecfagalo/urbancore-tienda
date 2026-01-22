@@ -13,7 +13,7 @@ const config = {
     // Mensaje base para pedidos
     whatsappMessage: 'Hola UrbanCore, me interesa el artículo: ',
     // Cantidad de productos a mostrar inicialmente
-    initialProducts: 6,
+    initialProducts: 8,
     // Cantidad de productos a cargar al hacer "Ver más"
     loadMoreCount: 3
 };
@@ -193,11 +193,11 @@ const productsData = [
     },
     {
         id: 9,
-        name: 'Camiseta HUGO BOSS',
+        name: 'Camiseta HOLLISTER',
         category: 'camisetas',
         price: 59900,
         originalPrice: null,
-        description: 'Prenda que combina la identidad clásica de la sastrería alemana con un estilo casual y gráfico.',
+        description: 'Prenda básica que captura la esencia del estilo de vida relajado de la costa oeste.',
         image: 'https://i.imgur.com/hVYumiP_d.png?maxwidth=520&shape=thumb&fidelity=high',
         images: [
             'https://i.imgur.com/hVYumiP_d.png?maxwidth=520&shape=thumb&fidelity=high'
@@ -256,25 +256,22 @@ const productsData = [
     },
     {
         id: 12,
-        name: 'Polo Elegant Grey',
+        name: 'Camiseta HUGOO BOSS',
         category: 'camisetas',
-        price: 54900,
+        price: 59900,
         originalPrice: null,
-        description: 'Acabados premium con cuello perfectamente estructurado.',
-        image: 'https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=600&q=80',
+        description: 'Prenda que combina la identidad clásica de la sastrería alemana con un estilo casual y gráfico.',
+        image: 'https://i.imgur.com/FGUrwNp_d.png?maxwidth=520&shape=thumb&fidelity=high',
         images: [
-            'https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=600&q=80',
-            'https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=600&q=80',
-            'https://images.unsplash.com/photo-1562157873-818bc0726f68?w=600&q=80'
+            'https://i.imgur.com/FGUrwNp_d.png?maxwidth=520&shape=thumb&fidelity=high'
         ],
         badge: 'Nuevo',
-        sizes: ['S', 'M', 'L', 'XL'],
+        sizes: ['XL'],
         details: {
             brand: 'UrbanCore',
-            artConcept: 'La sofisticación en su expresión más pura. Un gris profundo que transmite seriedad, elegancia y confianza.',
-            materials: 'Piqué premium de algodón con textura característica. Cuello de doble capa con interlock interior para mantener la forma. Botones personalizados.',
-            fit: 'Corte slim fit elegante. Ajuste más definido en la cintura. Perfecto para ocasiones especiales o el trabajo.',
-            careInstructions: 'Lavado a máquina en ciclo delicado. Planchar inmediatamente para mejores resultados. Guardar colgado.',
+            artConcept: 'camiseta Logo StripeEl diseño se centra en la logomanía moderna. Presenta el nombre "BOSS" en letras grandes con un patrón de rayas diagonales internas, lo que le da dinamismo visual al bloque de texto. Incluye el nombre completo "HUGO BOSS" justo debajo en una tipografía más pequeña y limpia.',
+            materials: 'Confeccionada típicamente en jersey de algodón 100% de alta calidad.',
+            fit: 'corte regular o "Regular Fit".',
             origin: 'Confección nacional con acabados de alta sastrería.'
         }
     }
