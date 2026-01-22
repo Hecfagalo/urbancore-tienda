@@ -598,7 +598,7 @@ img {
 }
 
 /* ============================================
-   FEATURES SECTION
+   FEATURES / TRUST SECTION
    ============================================ */
 
 .features-section {
@@ -608,37 +608,109 @@ img {
 
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--spacing-xl);
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .feature-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     padding: var(--spacing-xl);
     background-color: var(--bg-primary);
     border-radius: var(--radius-md);
-    transition: transform var(--transition-normal);
+    transition: all var(--transition-normal);
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    overflow: hidden;
 }
 
 .feature-card:hover {
     transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent-highlight), var(--accent-primary));
+    opacity: 0;
+    transition: opacity var(--transition-normal);
+}
+
+.feature-card:hover::before {
+    opacity: 1;
 }
 
 .feature-icon {
-    font-size: 2.5rem;
     margin-bottom: var(--spacing-md);
+    color: var(--accent-highlight);
+    transition: transform var(--transition-normal);
+}
+
+.feature-card:hover .feature-icon {
+    transform: scale(1.1);
 }
 
 .feature-card h3 {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     margin-bottom: var(--spacing-sm);
     color: var(--text-primary);
+    font-family: 'Teko', sans-serif;
+    font-weight: 600;
 }
 
 .feature-card p {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     color: var(--text-secondary);
     margin-bottom: 0;
+    line-height: 1.6;
+}
+
+.feature-cta {
+    margin-top: var(--spacing-md);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--accent-highlight);
+    transition: all var(--transition-fast);
+}
+
+.feature-card:hover .feature-cta {
+    transform: translateX(5px);
+}
+
+/* WhatsApp specific styles */
+.feature-whatsapp .feature-icon {
+    color: #25D366;
+}
+
+.feature-whatsapp:hover {
+    background: linear-gradient(135deg, rgba(37, 211, 102, 0.05) 0%, var(--bg-primary) 100%);
+}
+
+.feature-whatsapp::before {
+    background: linear-gradient(90deg, #25D366, #20BD5A);
+}
+
+/* Address specific styles */
+.feature-address .feature-icon {
+    color: var(--accent-primary);
+}
+
+.feature-address:hover {
+    background: linear-gradient(135deg, rgba(45, 45, 45, 0.03) 0%, var(--bg-primary) 100%);
+}
+
+.feature-address::before {
+    background: linear-gradient(90deg, var(--accent-primary), var(--text-primary));
 }
 
 /* ============================================
