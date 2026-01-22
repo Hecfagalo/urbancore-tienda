@@ -15,7 +15,7 @@ const config = {
     // Cantidad de productos a mostrar inicialmente
     initialProducts: 8,
     // Cantidad de productos a cargar al hacer "Ver más"
-    loadMoreCount: 3
+    loadMoreCount: 4
 };
 
 // ============================================
