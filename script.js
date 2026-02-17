@@ -175,7 +175,7 @@ const productsData = [
         name: 'Camiseta Amiri',
         category: 'Camisetas',
         price: 59900,
-        originalPrice: 59000,
+        originalPrice: 79900,
         description: 'pieza esencial que refleja la estética del rock and roll.',
         image: 'https://i.imgur.com/VzhuhDs_d.png?maxwidth=520&shape=thumb&fidelity=high',
         images: [
