@@ -9,7 +9,7 @@
 
 const config = {
     // Número de WhatsApp (cambiar por el número real)
-    whatsappNumber: '51999999999',
+    whatsappNumber: '573225513636',
     // Mensaje base para pedidos
     whatsappMessage: 'Hola UrbanCore, me interesa el artículo: ',
     // Cantidad de productos a mostrar inicialmente
